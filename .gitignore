@@ -51,6 +51,10 @@ ehthumbs.db
 .cache
 .parcel-cache
 
+# Vite cache and temporary files
+.vite
+vite.config.ts.timestamp-*
+
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
