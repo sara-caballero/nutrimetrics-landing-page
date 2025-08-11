@@ -425,7 +425,7 @@ function App() {
             <div className="lg:pl-8">
               <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="aspect-[4/7] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="aspect-[3/5] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
                     {activeFeature === 1 && (
                       <div className="w-full h-full">
                         <img 
