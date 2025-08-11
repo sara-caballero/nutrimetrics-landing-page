@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate, NavigateFunction } from 'react-router-dom';
 import { Camera, BookOpen, Target, Star, Users, Clock, Globe, BarChart3, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown } from 'lucide-react';
 import { translations, Language } from './translations';
 import PrivacyPage from './PrivacyPage';
@@ -853,15 +853,31 @@ function HomePage() {
   );
 }
 
+// Componentes wrapper para manejar la navegación
+function PrivacyPageWrapper() {
+  const navigate = useNavigate();
+  return <PrivacyPage language="en" onBack={() => navigate('/')} />;
+}
+
+function TermsPageWrapper() {
+  const navigate = useNavigate();
+  return <TermsPage language="en" onBack={() => navigate('/')} />;
+}
+
+function ComingSoonPageWrapper() {
+  const navigate = useNavigate();
+  return <ComingSoonPage language="en" onBack={() => navigate('/')} />;
+}
+
 // Componente principal App con enrutamiento
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/privacy" element={<PrivacyPage language="en" onBack={() => window.history.back()} />} />
-        <Route path="/terms" element={<TermsPage language="en" onBack={() => window.history.back()} />} />
-        <Route path="/coming-soon" element={<ComingSoonPage language="en" onBack={() => window.history.back()} />} />
+        <Route path="/privacy" element={<PrivacyPageWrapper />} />
+        <Route path="/terms" element={<TermsPageWrapper />} />
+        <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
       </Routes>
     </Router>
   );
