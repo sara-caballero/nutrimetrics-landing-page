@@ -535,74 +535,25 @@ function App() {
 
       {/* Testimonials Section */}
       <section id="testimonials-section" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.testimonialsTitle}
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               {t.testimonialsSubtitle}
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-[#4FD1C5]/5 to-white p-6 rounded-2xl border border-[#4FD1C5]/20">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "{t.testimonial1}"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-[#4FD1C5]/20 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#4FD1C5] font-semibold">SM</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Sarah M.</p>
-                  <p className="text-sm text-gray-500">{t.betaTester}</p>
-                </div>
-              </div>
-            </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border border-blue-100">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
+            <div className="bg-gradient-to-br from-[#4FD1C5]/5 to-white p-12 rounded-2xl border border-[#4FD1C5]/20">
+              <div className="flex items-center justify-center mb-6">
+                <Users className="w-12 h-12 text-[#4FD1C5]" />
               </div>
-              <p className="text-gray-700 mb-4 italic">
-                "{t.testimonial2}"
+              <p className="text-lg text-gray-700 mb-6">
+                {t.testimonial1}
               </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-blue-800 font-semibold">JR</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">James R.</p>
-                  <p className="text-sm text-gray-500">{t.betaTester}</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-[#4FD1C5]/5 to-white p-6 rounded-2xl border border-[#4FD1C5]/20">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "{t.testimonial3}"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-[#4FD1C5]/20 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#4FD1C5] font-semibold">AL</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Anna L.</p>
-                  <p className="text-sm text-gray-500">{t.betaTester}</p>
-                </div>
+              <div className="inline-flex items-center px-4 py-2 bg-[#4FD1C5]/10 text-[#4FD1C5] rounded-full text-sm font-medium">
+                <Clock className="w-4 h-4 mr-2" />
+                {t.betaTester}
               </div>
             </div>
           </div>

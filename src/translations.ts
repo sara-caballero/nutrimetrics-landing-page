@@ -31,9 +31,9 @@ export const translations = {
     testimonialsTitle: "Coming Soon: Beta User Reviews",
     testimonialsSubtitle: "Real feedback from people testing Nutrimetrics",
     
-    testimonial1: "Coming soon: Reviews from our beta testers",
-    testimonial2: "Coming soon: Reviews from our beta testers",
-    testimonial3: "Coming soon: Reviews from our beta testers",
+    testimonial1: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
+    testimonial2: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
+    testimonial3: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
     
     betaTester: "Beta Tester",
     
@@ -269,9 +269,9 @@ export const translations = {
     testimonialsTitle: "Próximamente: opiniones de nuestros usuarios beta",
     testimonialsSubtitle: "Comentarios reales de personas probando Nutrimetrics",
     
-    testimonial1: "Próximamente: opiniones de nuestros usuarios beta",
-    testimonial2: "Próximamente: opiniones de nuestros usuarios beta",
-    testimonial3: "Próximamente: opiniones de nuestros usuarios beta",
+    testimonial1: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
+    testimonial2: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
+    testimonial3: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
     
     betaTester: "Probador Beta",
     
@@ -507,9 +507,9 @@ export const translations = {
     testimonialsTitle: "Bientôt disponible : avis de nos utilisateurs bêta",
     testimonialsSubtitle: "Vrais commentaires de personnes testant Nutrimetrics",
     
-    testimonial1: "Bientôt disponible : avis de nos utilisateurs bêta",
-    testimonial2: "Bientôt disponible : avis de nos utilisateurs bêta",
-    testimonial3: "Bientôt disponible : avis de nos utilisateurs bêta",
+    testimonial1: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
+    testimonial2: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
+    testimonial3: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
     
     betaTester: "Testeur Bêta",
     
