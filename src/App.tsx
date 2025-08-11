@@ -5,6 +5,8 @@ import PrivacyPage from './PrivacyPage';
 import ComingSoonPage from './ComingSoonPage';
 import TermsPage from './TermsPage';
 import logoImage from '/splash-icon.png';
+import homeImage from '/home.png';
+import statsImage from '/stats.png';
 
 function App() {
   const [language, setLanguage] = useState<Language>('en');
@@ -421,7 +423,7 @@ function App() {
             <div className="lg:pl-8">
               <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="aspect-[9/16] bg-gray-100 rounded-xl flex items-center justify-center">
+                  <div className="aspect-[9/16] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
                     {activeFeature === 1 && (
                       <div className="text-center">
                         <Camera className="w-16 h-16 text-[#4FD1C5] mx-auto mb-4" />
@@ -429,9 +431,12 @@ function App() {
                       </div>
                     )}
                     {activeFeature === 2 && (
-                      <div className="text-center">
-                        <BookOpen className="w-16 h-16 text-[#4FD1C5] mx-auto mb-4" />
-                        <p className="text-gray-600 font-medium">{t.visualFoodDiaryScreenshot}</p>
+                      <div className="w-full h-full">
+                        <img 
+                          src={homeImage} 
+                          alt="Personalized Daily Overview" 
+                          className="w-full h-full object-cover rounded-xl"
+                        />
                       </div>
                     )}
                     {activeFeature === 3 && (
@@ -441,9 +446,12 @@ function App() {
                       </div>
                     )}
                     {activeFeature === 4 && (
-                      <div className="text-center">
-                        <BarChart3 className="w-16 h-16 text-[#4FD1C5] mx-auto mb-4" />
-                        <p className="text-gray-600 font-medium">{t.basicStatsScreenshot}</p>
+                      <div className="w-full h-full">
+                        <img 
+                          src={statsImage} 
+                          alt="Basic Stats & Trends" 
+                          className="w-full h-full object-cover rounded-xl"
+                        />
                       </div>
                     )}
                   </div>
