@@ -423,46 +423,63 @@ function App() {
             </div>
             
             <div className="lg:pl-8">
-              <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-3xl p-8 shadow-2xl">
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="aspect-[3/4] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
-                    {activeFeature === 1 && (
-                      <div className="w-full h-full">
-                        <img 
-                          src={analyseImage} 
-                          alt="AI-Powered Meal Analysis" 
-                          className="w-full h-full object-cover rounded-xl"
-                        />
+              <div className="flex justify-center">
+                {/* Phone Frame */}
+                <div className="relative">
+                  {/* Phone Body */}
+                  <div className="w-64 h-[32rem] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                    {/* Screen */}
+                    <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                      {/* Status Bar */}
+                      <div className="absolute top-0 left-0 right-0 h-6 bg-black rounded-t-[2.5rem] flex items-center justify-between px-6 z-10">
+                        <div className="flex items-center space-x-1">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <div className="text-white text-xs font-medium">9:41</div>
+                        <div className="flex items-center space-x-1">
+                          <div className="w-4 h-2 border border-white rounded-sm"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                        </div>
                       </div>
-                    )}
-                    {activeFeature === 2 && (
-                      <div className="w-full h-full">
-                        <img 
-                          src={homeImage} 
-                          alt="Personalized Daily Overview" 
-                          className="w-full h-full object-cover rounded-xl"
-                        />
+                      
+                      {/* App Content */}
+                      <div className="w-full h-full pt-6">
+                        {activeFeature === 1 && (
+                          <img 
+                            src={analyseImage} 
+                            alt="AI-Powered Meal Analysis" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {activeFeature === 2 && (
+                          <img 
+                            src={homeImage} 
+                            alt="Personalized Daily Overview" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {activeFeature === 3 && (
+                          <img 
+                            src={journalImage} 
+                            alt="Visual Food Journal" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                        {activeFeature === 4 && (
+                          <img 
+                            src={statsImage} 
+                            alt="Basic Stats & Trends" 
+                            className="w-full h-full object-cover"
+                          />
+                        )}
                       </div>
-                    )}
-                    {activeFeature === 3 && (
-                      <div className="w-full h-full">
-                        <img 
-                          src={journalImage} 
-                          alt="Visual Food Journal" 
-                          className="w-full h-full object-cover rounded-xl"
-                        />
-                      </div>
-                    )}
-                    {activeFeature === 4 && (
-                      <div className="w-full h-full">
-                        <img 
-                          src={statsImage} 
-                          alt="Basic Stats & Trends" 
-                          className="w-full h-full object-cover rounded-xl"
-                        />
-                      </div>
-                    )}
+                    </div>
                   </div>
+                  
+                  {/* Home Indicator */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gray-900 rounded-full"></div>
                 </div>
               </div>
             </div>

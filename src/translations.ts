@@ -335,7 +335,7 @@ export const translations = {
     whyChooseTitle: "¿Por qué elegir Nutrimetrics?",
     whyChooseSubtitle: "La forma más inteligente de rastrear tus comidas — con solo una foto.",
     
-    whyChoose1Title: "Olvídate de las conjeturas",
+    whyChoose1Title: "Olvídate de adivinar",
     whyChoose1Description: "No más registro manual de calorías o escaneo de códigos de barras. Solo toma una foto y Nutrimetrics analiza instantáneamente tu comida: calorías, macros y tamaño de porción — todo adaptado a tu perfil.",
     
     whyChoose2Title: "Se adapta a tu estilo de vida",
