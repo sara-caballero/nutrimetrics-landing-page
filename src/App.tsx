@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Camera, BookOpen, Target, Star, Users, Clock, Globe, BarChart3, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown } from 'lucide-react';
 import { translations, Language } from './translations';
 import PrivacyPage from './PrivacyPage';
@@ -10,7 +11,8 @@ import statsImage from '/stats.png';
 import analyseImage from '/analyse.png';
 import journalImage from '/journal.png';
 
-function App() {
+// Componente principal de la página de inicio
+function HomePage() {
   const [language, setLanguage] = useState<Language>('en');
   const [formData, setFormData] = useState({
     name: '',
@@ -19,12 +21,10 @@ function App() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [activeFeature, setActiveFeature] = useState(1);
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showComingSoon, setShowComingSoon] = useState(false);
-  const [showTerms, setShowTerms] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
   const [faqSectionOpen, setFaqSectionOpen] = useState(false);
+  const navigate = useNavigate();
 
   const t = translations[language];
 
@@ -58,18 +58,6 @@ function App() {
   const toggleFaqItem = (itemIndex: number) => {
     setOpenFaqItem(openFaqItem === itemIndex ? null : itemIndex);
   };
-
-  if (showPrivacy) {
-    return <PrivacyPage language={language} onBack={() => setShowPrivacy(false)} />;
-  }
-
-  if (showComingSoon) {
-    return <ComingSoonPage language={language} onBack={() => setShowComingSoon(false)} />;
-  }
-
-  if (showTerms) {
-    return <TermsPage language={language} onBack={() => setShowTerms(false)} />;
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -114,7 +102,7 @@ function App() {
               <div className="hidden lg:flex items-center space-x-4">
                 {/* App Store Button */}
                 <button 
-                  onClick={() => setShowComingSoon(true)}
+                  onClick={() => navigate('/coming-soon')}
                   className="inline-flex items-center bg-black text-white px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <svg className="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
@@ -128,7 +116,7 @@ function App() {
                 
                 {/* Google Play Button */}
                 <button 
-                  onClick={() => setShowComingSoon(true)}
+                  onClick={() => navigate('/coming-soon')}
                   className="inline-flex items-center bg-black text-white px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   <svg className="w-8 h-8 mr-2" viewBox="0 0 24 24">
@@ -184,7 +172,7 @@ function App() {
                   <div className="flex flex-col space-y-3">
                     {/* App Store Button */}
                     <button 
-                      onClick={() => setShowComingSoon(true)}
+                      onClick={() => navigate('/coming-soon')}
                       className="inline-flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
                     >
                       <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
@@ -198,7 +186,7 @@ function App() {
                     
                     {/* Google Play Button */}
                     <button 
-                      onClick={() => setShowComingSoon(true)}
+                      onClick={() => navigate('/coming-soon')}
                       className="inline-flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
                     >
                       <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24">
@@ -845,14 +833,14 @@ function App() {
               <span>{t.footerContact}</span>
               <span className="hidden sm:inline">•</span>
               <button
-                onClick={() => setShowPrivacy(true)}
+                onClick={() => navigate('/privacy')}
                 className="hover:text-white transition-colors underline"
               >
                 {t.navPrivacy}
               </button>
               <span className="hidden sm:inline">•</span>
               <button
-                onClick={() => setShowTerms(true)}
+                onClick={() => navigate('/terms')}
                 className="hover:text-white transition-colors underline"
               >
                 {t.navTerms}
@@ -862,6 +850,20 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+// Componente principal App con enrutamiento
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<PrivacyPage language="en" onBack={() => window.history.back()} />} />
+        <Route path="/terms" element={<TermsPage language="en" onBack={() => window.history.back()} />} />
+        <Route path="/coming-soon" element={<ComingSoonPage language="en" onBack={() => window.history.back()} />} />
+      </Routes>
+    </Router>
   );
 }
 
