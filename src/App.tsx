@@ -7,6 +7,8 @@ import TermsPage from './TermsPage';
 import logoImage from '/splash-icon.png';
 import homeImage from '/home.png';
 import statsImage from '/stats.png';
+import analyseImage from '/analyse.png';
+import journalImage from '/journal.png';
 
 function App() {
   const [language, setLanguage] = useState<Language>('en');
@@ -423,11 +425,14 @@ function App() {
             <div className="lg:pl-8">
               <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-3xl p-8 shadow-2xl">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="aspect-[9/16] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="aspect-[4/7] bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
                     {activeFeature === 1 && (
-                      <div className="text-center">
-                        <Camera className="w-16 h-16 text-[#4FD1C5] mx-auto mb-4" />
-                        <p className="text-gray-600 font-medium">{t.photoAnalysisScreenshot}</p>
+                      <div className="w-full h-full">
+                        <img 
+                          src={analyseImage} 
+                          alt="AI-Powered Meal Analysis" 
+                          className="w-full h-full object-cover rounded-xl"
+                        />
                       </div>
                     )}
                     {activeFeature === 2 && (
@@ -440,9 +445,12 @@ function App() {
                       </div>
                     )}
                     {activeFeature === 3 && (
-                      <div className="text-center">
-                        <Target className="w-16 h-16 text-[#4FD1C5] mx-auto mb-4" />
-                        <p className="text-gray-600 font-medium">{t.dailyCoachingScreenshot}</p>
+                      <div className="w-full h-full">
+                        <img 
+                          src={journalImage} 
+                          alt="Visual Food Journal" 
+                          className="w-full h-full object-cover rounded-xl"
+                        />
                       </div>
                     )}
                     {activeFeature === 4 && (
