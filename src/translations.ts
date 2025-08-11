@@ -28,12 +28,12 @@ export const translations = {
     benefit3Description: "Get daily personalized advice based on your goals - whether you want to lose weight, maintain, or gain muscle mass. Tailored just for you.",
     
     // Testimonials
-    testimonialsTitle: "What our beta users are saying",
+    testimonialsTitle: "Coming Soon: Beta User Reviews",
     testimonialsSubtitle: "Real feedback from people testing Nutrimetrics",
     
-    testimonial1: "It helped me understand what I was eating without overcomplicating things. The photo feature is amazing - so much easier than manual logging!",
-    testimonial2: "Finally, a nutrition app that doesn't feel like homework. The daily recommendations actually make sense and are easy to follow.",
-    testimonial3: "I love how accurate the photo analysis is. It's like having a nutritionist in my pocket. Can't wait for the full version!",
+    testimonial1: "Coming soon: Reviews from our beta testers",
+    testimonial2: "Coming soon: Reviews from our beta testers",
+    testimonial3: "Coming soon: Reviews from our beta testers",
     
     betaTester: "Beta Tester",
     
@@ -266,12 +266,12 @@ export const translations = {
     benefit3Description: "Recibe consejos diarios personalizados basados en tus objetivos - ya sea que quieras perder peso, mantenerlo o ganar masa muscular. Adaptado solo para ti.",
     
     // Testimonials
-    testimonialsTitle: "Lo que dicen nuestros usuarios beta",
+    testimonialsTitle: "Próximamente: opiniones de nuestros usuarios beta",
     testimonialsSubtitle: "Comentarios reales de personas probando Nutrimetrics",
     
-    testimonial1: "Me ayudó a entender lo que estaba comiendo sin complicar las cosas. ¡La función de foto es increíble - mucho más fácil que registrar manualmente!",
-    testimonial2: "Finalmente, una app de nutrición que no se siente como tarea. Las recomendaciones diarias realmente tienen sentido y son fáciles de seguir.",
-    testimonial3: "Me encanta lo preciso que es el análisis de fotos. Es como tener un nutricionista en mi bolsillo. ¡No puedo esperar a la versión completa!",
+    testimonial1: "Próximamente: opiniones de nuestros usuarios beta",
+    testimonial2: "Próximamente: opiniones de nuestros usuarios beta",
+    testimonial3: "Próximamente: opiniones de nuestros usuarios beta",
     
     betaTester: "Probador Beta",
     
@@ -504,12 +504,12 @@ export const translations = {
     benefit3Description: "Recevez des conseils quotidiens personnalisés basés sur vos objectifs - que vous souhaitiez perdre du poids, maintenir ou prendre de la masse musculaire. Adapté juste pour vous.",
     
     // Testimonials
-    testimonialsTitle: "Ce que disent nos utilisateurs bêta",
+    testimonialsTitle: "Bientôt disponible : avis de nos utilisateurs bêta",
     testimonialsSubtitle: "Vrais commentaires de personnes testant Nutrimetrics",
     
-    testimonial1: "Cela m'a aidé à comprendre ce que je mangeais sans compliquer les choses. La fonction photo est incroyable - tellement plus facile que la saisie manuelle !",
-    testimonial2: "Enfin, une app de nutrition qui ne ressemble pas à des devoirs. Les recommandations quotidiennes ont vraiment du sens et sont faciles à suivre.",
-    testimonial3: "J'adore la précision de l'analyse photo. C'est comme avoir un nutritionniste dans ma poche. J'ai hâte de voir la version complète !",
+    testimonial1: "Bientôt disponible : avis de nos utilisateurs bêta",
+    testimonial2: "Bientôt disponible : avis de nos utilisateurs bêta",
+    testimonial3: "Bientôt disponible : avis de nos utilisateurs bêta",
     
     betaTester: "Testeur Bêta",
     

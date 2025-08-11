@@ -427,7 +427,7 @@ function App() {
                 {/* Phone Frame */}
                 <div className="relative">
                   {/* Phone Body */}
-                  <div className="w-64 h-[32rem] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                  <div className="w-80 h-[40rem] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
                     {/* Screen */}
                     <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
                       {/* Status Bar */}
