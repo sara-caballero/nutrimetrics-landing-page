@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { translations, Language } from './translations';
+import logoImage from '/splash-icon.png';
 
 interface TermsPageProps {
   language: Language;
@@ -38,7 +39,7 @@ const TermsPage: React.FC<TermsPageProps> = ({ language, onBack }) => {
             
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
-                <img src="/splash-icon.png" alt="Nutrimetrics Logo" className="w-6 h-6 sm:w-10 sm:h-10" />
+                <img src={logoImage} alt="Nutrimetrics Logo" className="w-6 h-6 sm:w-10 sm:h-10" />
               </div>
               <span className="text-lg sm:text-2xl font-bold text-[#4FD1C5]">Nutrimetrics</span>
             </div>

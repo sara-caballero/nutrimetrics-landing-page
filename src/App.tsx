@@ -263,9 +263,9 @@ function App() {
                 {t.ctaPrimary}
               </button>
               
-              <div className="flex items-center text-gray-600 text-sm font-medium">
-                <Clock className="w-4 h-4 mr-2" />
-                {t.betaDuration}
+              <div className="flex items-start text-gray-600 text-sm font-medium">
+                <Clock className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />
+                <span>{t.betaDuration}</span>
               </div>
             </div>
             
