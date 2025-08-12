@@ -124,8 +124,11 @@ export const translations = {
     faq2Question: "How does the photo analysis work?",
     faq2Answer: "Nutrimetrics uses advanced AI and image recognition to analyze your meals. Just snap a photo (or upload one), and the app identifies ingredients, estimates portion sizes, and calculates calories, protein, fats, and carbs. You'll get a health score (1–5) and smart suggestions to improve your meal.",
     
-    faq3Question: "How accurate are the calorie and macronutrient calculations?",
-    faq3Answer: "Our nutritional calculations are based on scientific formulas. For calorie calculations, we use the Mifflin-St Jeor equation to determine your Basal Metabolic Rate (BMR), then adjust for your activity level and health goals. Macronutrient distribution follows evidence-based guidelines: protein at 1.6-2g per kg of body weight, fats at 25-30% of total calories, and carbohydrates filling the remaining calories. While our estimates are highly accurate, we recommend using them as guidance rather than absolute values, as actual nutritional content can vary based on preparation methods and ingredient quality.",
+    faq3Question: "How accurate are my daily calorie and macro targets?",
+    faq3Answer: "We calculate your daily calorie and macronutrient targets using the Mifflin–St Jeor equation, one of the most trusted formulas in modern nutrition science, and tailor it to your age, weight, height, gender, activity level, and specific goals. This mix of proven science and personalization gives you numbers you can rely on to see real progress. And because life changes, you can easily adjust your targets in the app at any time, ensuring your plan always fits your current lifestyle.",
+    
+    faq3bQuestion: "How accurate is the food and meal analysis?",
+    faq3bAnswer: "Our AI-powered meal analysis instantly recognizes what you eat, estimates portion sizes, and delivers accurate calorie and macro breakdowns in seconds. It's fueled by trusted nutrition databases and gets even smarter the more you use it, making tracking quick, easy, and stress-free. While cooking methods and ingredient quality can slightly affect results, our analysis is precise enough to give you full confidence in your daily choices, without the hassle of manual tracking.",
     
     faq4Question: "Is my personal data secure?",
     faq4Answer: "Yes — 100%. We prioritize your privacy and data security above all else. Your data is never shared with third-party companies, advertisers, or any external organizations. You can delete your account and all data anytime.",
@@ -244,12 +247,12 @@ export const translations = {
     
     // Hero section
     betaBadge: "Únete a nuestro programa de pruebas beta",
-    heroTitle: "Rastrea tus comidas. Más inteligente. Más rápido. Visualmente.",
+    heroTitle: "Registra tus comidas. Más inteligente. Más rápido. Visualmente.",
     heroSubtitle: "Nutrimetrics analiza tu comida desde una sola foto",
     heroSubtitleSuffix: "y te da consejos diarios de salud adaptados a tus objetivos.",
-    heroDescription: "🎯 No más registro manual. Solo captura, rastrea y prospera.",
-    ctaPrimary: "👉 Únete al Beta Gratuito – 14 Días de Acceso Completo",
-    betaDuration: "Prueba el asistente nutricional con IA y obtén acceso anticipado hoy.",
+    heroDescription: "🎯 Se acabó el registro manual. Solo toma la foto, registra y progresa.",
+    ctaPrimary: "👉 Únete al Beta Gratis - 14 Días de Acceso Completo",
+    betaDuration: "Prueba el asistente nutricional con IA y obtén acceso anticipado hoy mismo.",
     ctaReassurance: "Sin tarjeta de crédito. Sin spam. Solo comentarios reales para ayudarnos a crear la mejor app de nutrición para ti.",
     
     // Benefits section
@@ -362,8 +365,11 @@ export const translations = {
     faq2Question: "¿Cómo funciona el análisis de fotos?",
     faq2Answer: "Nutrimetrics usa IA avanzada y reconocimiento de imágenes para analizar tus comidas. Solo toma una foto (o súbela), y la app identifica ingredientes, estima tamaños de porción y calcula calorías, proteínas, grasas y carbohidratos. Obtendrás una puntuación de salud (1-5) y sugerencias inteligentes para mejorar tu comida.",
     
-    faq3Question: "¿Qué tan precisos son los cálculos de calorías y macronutrientes?",
-    faq3Answer: "Nuestros cálculos nutricionales se basan en fórmulas científicas. Para los cálculos de calorías, usamos la ecuación de Mifflin-St Jeor para determinar tu Tasa Metabólica Basal (BMR), luego ajustamos según tu nivel de actividad y objetivos de salud. La distribución de macronutrientes sigue pautas basadas en evidencia: proteína a 1.6-2g por kg de peso corporal, grasas al 25-30% de las calorías totales, y carbohidratos llenando las calorías restantes. Aunque nuestras estimaciones son muy precisas, recomendamos usarlas como guía en lugar de valores absolutos, ya que el contenido nutricional real puede variar según los métodos de preparación y la calidad de los ingredientes.",
+    faq3Question: "¿Qué tan precisos son mis objetivos diarios de calorías y macros?",
+    faq3Answer: "Calculamos tus objetivos diarios de calorías y macronutrientes usando la ecuación de Mifflin–St Jeor, una de las fórmulas más confiables en la ciencia nutricional moderna, y la adaptamos a tu edad, peso, altura, género, nivel de actividad y objetivos específicos. Esta combinación de ciencia probada y personalización te da números en los que puedes confiar para ver progreso real. Y como la vida cambia, puedes ajustar fácilmente tus objetivos en la app en cualquier momento, asegurando que tu plan siempre se adapte a tu estilo de vida actual.",
+    
+    faq3bQuestion: "¿Qué tan preciso es el análisis de alimentos y comidas?",
+    faq3bAnswer: "Nuestro análisis de comidas impulsado por IA reconoce instantáneamente lo que comes, estima tamaños de porción y entrega desgloses precisos de calorías y macros en segundos. Está alimentado por bases de datos nutricionales confiables y se vuelve aún más inteligente cuanto más lo usas, haciendo que el seguimiento sea rápido, fácil y sin estrés. Aunque los métodos de cocción y la calidad de los ingredientes pueden afectar ligeramente los resultados, nuestro análisis es lo suficientemente preciso para darte plena confianza en tus elecciones diarias, sin la molestia del seguimiento manual.",
     
     faq4Question: "¿Mis datos personales están seguros?",
     faq4Answer: "Sí — 100%. Priorizamos tu privacidad y seguridad de datos por encima de todo. Tus datos nunca se comparten con empresas externas, anunciantes o cualquier organización externa. Puedes eliminar tu cuenta y todos los datos en cualquier momento.",
@@ -478,17 +484,17 @@ export const translations = {
   fr: {
     // Meta and title
     title: "Nutrimetrics - Votre nourriture, en un clic",
-    metaDescription: "Rejoignez le programme bêta de Nutrimetrics. Capturez votre assiette, obtenez une analyse nutritionnelle instantanée et des conseils quotidiens personnalisés en quelques secondes.",
+    metaDescription: "Rejoignez notre programme bêta de Nutrimetrics. Capturez votre assiette, obtenez une analyse nutritionnelle instantanée et des conseils quotidiens personnalisés en quelques secondes.",
     
     // Hero section
     betaBadge: "Rejoignez notre programme de test bêta",
     heroTitle: "Suivez vos repas. Plus intelligent. Plus rapide. Visuellement.",
-    heroSubtitle: "Nutrimetrics analyse votre nourriture à partir d'une seule photo",
+    heroSubtitle: "Nutrimetrics analyse vos plats à partir d'une seule photo",
     heroSubtitleSuffix: "et vous donne des conseils de santé quotidiens adaptés à vos objectifs.",
     heroDescription: "🎯 Fini la saisie manuelle. Capturez, suivez et prospérez.",
     ctaPrimary: "👉 Rejoignez le Bêta Gratuit – 14 Jours d'Accès Complet",
     betaDuration: "Testez l'assistant nutritionnel IA et obtenez un accès anticipé aujourd'hui.",
-    ctaReassurance: "Pas de carte de crédit. Pas de spam. Juste de vrais commentaires pour nous aider à créer la meilleure app nutrition pour vous.",
+    ctaReassurance: "Pas de carte bancaire. Pas de spam. Juste votre retour pour nous aider à créer la meilleure app nutrition pour vous.",
     
     // Benefits section
     benefitsTitle: "Tout ce dont vous avez besoin pour suivre votre nutrition",
@@ -600,8 +606,11 @@ export const translations = {
     faq2Question: "Comment fonctionne l'analyse photo ?",
     faq2Answer: "Nutrimetrics utilise l'IA avancée et la reconnaissance d'images pour analyser vos repas. Prenez simplement une photo (ou téléchargez-en une), et l'app identifie les ingrédients, estime les tailles de portions et calcule les calories, protéines, graisses et glucides. Vous obtiendrez un score de santé (1-5) et des suggestions intelligentes pour améliorer votre repas.",
     
-    faq3Question: "Quelle est la précision des calculs de calories et macronutriments ?",
-    faq3Answer: "Nos calculs nutritionnels sont basés sur des formules scientifiques. Pour les calculs de calories, nous utilisons l'équation de Mifflin-St Jeor pour déterminer votre Taux Métabolique de Base (BMR), puis ajustons selon votre niveau d'activité et vos objectifs de santé. La distribution des macronutriments suit des directives fondées sur des preuves : protéines à 1,6-2g par kg de poids corporel, graisses à 25-30% des calories totales, et glucides remplissant les calories restantes. Bien que nos estimations soient très précises, nous recommandons de les utiliser comme guide plutôt que comme valeurs absolues, car le contenu nutritionnel réel peut varier selon les méthodes de préparation et la qualité des ingrédients.",
+    faq3Question: "Quelle est la précision de mes objectifs quotidiens de calories et macros ?",
+    faq3Answer: "Nous calculons vos objectifs quotidiens de calories et macronutriments en utilisant l'équation de Mifflin–St Jeor, l'une des formules les plus fiables de la science nutritionnelle moderne, et l'adaptons à votre âge, poids, taille, genre, niveau d'activité et objectifs spécifiques. Ce mélange de science éprouvée et de personnalisation vous donne des chiffres sur lesquels vous pouvez compter pour voir de vrais progrès. Et comme la vie change, vous pouvez facilement ajuster vos objectifs dans l'app à tout moment, garantissant que votre plan s'adapte toujours à votre style de vie actuel.",
+    
+    faq3bQuestion: "Quelle est la précision de l'analyse des aliments et repas ?",
+    faq3bAnswer: "Notre analyse de repas alimentée par l'IA reconnaît instantanément ce que vous mangez, estime les tailles de portions et livre des décompositions précises de calories et macros en quelques secondes. Elle est alimentée par des bases de données nutritionnelles fiables et devient encore plus intelligente plus vous l'utilisez, rendant le suivi rapide, facile et sans stress. Bien que les méthodes de cuisson et la qualité des ingrédients puissent légèrement affecter les résultats, notre analyse est suffisamment précise pour vous donner pleine confiance dans vos choix quotidiens, sans la corvée du suivi manuel.",
     
     faq4Question: "Mes données personnelles sont-elles sécurisées ?",
     faq4Answer: "Oui — 100%. Nous priorisons votre vie privée et la sécurité des données avant tout. Vos données ne sont jamais partagées avec des entreprises tierces, des annonceurs ou des organisations externes. Vous pouvez supprimer votre compte et toutes les données à tout moment.",

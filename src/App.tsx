@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate, NavigateFunction } from 'react-router-dom';
-import { Camera, BookOpen, Target, Star, Users, Clock, Globe, BarChart3, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { Camera, BookOpen, Target, Users, Clock, Globe, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown } from 'lucide-react';
 import { translations, Language } from './translations';
 import PrivacyPage from './PrivacyPage';
 import ComingSoonPage from './ComingSoonPage';
@@ -714,6 +714,22 @@ function HomePage() {
                 {openFaqItem === 3 && (
                   <div className="px-6 pb-4">
                     <p className="text-gray-600 leading-relaxed">{t.faq3Answer}</p>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ Item 3b */}
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <button
+                  onClick={() => toggleFaqItem(3.5)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                >
+                  <span className="font-semibold text-gray-900">{t.faq3bQuestion}</span>
+                  <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${openFaqItem === 3.5 ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaqItem === 3.5 && (
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-600 leading-relaxed">{t.faq3bAnswer}</p>
                   </div>
                 )}
               </div>
