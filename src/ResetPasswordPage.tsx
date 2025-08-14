@@ -20,10 +20,9 @@ const ResetPasswordPage: React.FC = () => {
 
   const supabase = window.supabase?.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  // Verificar que Supabase esté disponible
   useEffect(() => {
     if (!window.supabase) {
-      showMessage('error', 'Error: Supabase no está disponible. Recarga la página.');
+      showMessage('error', 'Error: Supabase is not available. Please reload the page.');
       return;
     }
   }, []);
@@ -34,85 +33,80 @@ const ResetPasswordPage: React.FC = () => {
 
   const validatePasswords = () => {
     if (password.length < 6) {
-      showMessage('error', 'La contraseña debe tener al menos 6 caracteres');
+      showMessage('error', 'Password must be at least 6 characters long');
       return false;
     }
     
     if (password !== confirmPassword) {
-      showMessage('error', 'Las contraseñas no coinciden');
+      showMessage('error', 'Passwords do not match');
       return false;
     }
     
     return true;
   };
 
-  const initializeAuth = async () => {
+    const initializeAuth = async () => {
     try {
-      // Verificar que Supabase esté disponible
-      if (!window.supabase) {
-        showMessage('error', 'Error: Supabase no está disponible. Recarga la página.');
-        return;
-      }
-
-      // Verificar que el cliente se haya creado correctamente
-      if (!supabase) {
-        showMessage('error', 'Error: No se pudo crear el cliente de Supabase.');
-        return;
-      }
-
-      // Procesar la URL para obtener el token de acceso
-      const urlParams = new URLSearchParams(window.location.hash.substring(1));
-      const accessToken = urlParams.get('access_token');
-      const refreshToken = urlParams.get('refresh_token');
-
-      if (accessToken) {
-        // Establecer la sesión manualmente
-        const { data, error } = await supabase.auth.setSession({
-          access_token: accessToken,
-          refresh_token: refreshToken || ''
-        });
-
-        if (error) {
-          console.error('Supabase auth error:', error);
-          showMessage('error', `Error al autenticar: ${error.message}`);
+        if (!window.supabase) {
+          showMessage('error', 'Error: Supabase is not available. Please reload the page.');
           return;
         }
 
-        if (data.session) {
-          setIsAuthenticated(true);
-          showMessage('success', 'Autenticación exitosa. Puedes cambiar tu contraseña.');
-        } else {
-          showMessage('error', 'Enlace inválido o expirado. Solicita un nuevo enlace de restablecimiento.');
-        }
-      } else {
-        // Verificar si ya hay una sesión activa
-        const { data, error } = await supabase.auth.getSession();
-        
-        if (error) {
-          console.error('Supabase auth error:', error);
-          showMessage('error', `Error al autenticar: ${error.message}`);
+        if (!supabase) {
+          showMessage('error', 'Error: Could not create Supabase client.');
           return;
         }
-        
-        if (data.session) {
-          setIsAuthenticated(true);
-          showMessage('success', 'Autenticación exitosa. Puedes cambiar tu contraseña.');
-        } else {
-          showMessage('error', 'Enlace inválido o expirado. Solicita un nuevo enlace de restablecimiento.');
-        }
-      }
-      
-    } catch (error) {
-      console.error('Unexpected error during auth:', error);
-      showMessage('error', 'Error inesperado durante la autenticación.');
-    }
-  };
+
+       const urlParams = new URLSearchParams(window.location.hash.substring(1));
+       const accessToken = urlParams.get('access_token');
+       const refreshToken = urlParams.get('refresh_token');
+
+       if (accessToken) {
+         const { data, error } = await supabase.auth.setSession({
+           access_token: accessToken,
+           refresh_token: refreshToken || ''
+         });
+
+         if (error) {
+           console.error('Supabase auth error:', error);
+           showMessage('error', `Authentication error: ${error.message}`);
+           return;
+         }
+
+         if (data.session) {
+           setIsAuthenticated(true);
+           showMessage('success', 'Authentication successful. You can now change your password.');
+         } else {
+           showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+         }
+       } else {
+         const { data, error } = await supabase.auth.getSession();
+         
+         if (error) {
+           console.error('Supabase auth error:', error);
+           showMessage('error', `Authentication error: ${error.message}`);
+           return;
+         }
+         
+         if (data.session) {
+           setIsAuthenticated(true);
+           showMessage('success', 'Authentication successful. You can now change your password.');
+         } else {
+           showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+         }
+       }
+       
+     } catch (error) {
+       console.error('Unexpected error during auth:', error);
+       showMessage('error', 'Unexpected error during authentication.');
+     }
+   };
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     
     if (!isAuthenticated) {
-      showMessage('error', 'Debes estar autenticado para cambiar la contraseña.');
+      showMessage('error', 'You must be authenticated to change your password.');
       return;
     }
     
@@ -128,18 +122,18 @@ const ResetPasswordPage: React.FC = () => {
       });
       
       if (error) {
-        showMessage('error', `Error al actualizar contraseña: ${error.message}`);
+        showMessage('error', `Error updating password: ${error.message}`);
         return;
       }
       
       if (data.user) {
-        showMessage('success', '¡Contraseña actualizada exitosamente! Ya puedes iniciar sesión con tu nueva contraseña.');
+        showMessage('success', 'Password updated successfully! You can now sign in with your new password.');
         setPassword('');
         setConfirmPassword('');
       }
       
     } catch (error) {
-      showMessage('error', 'Error inesperado al actualizar la contraseña.');
+      showMessage('error', 'Unexpected error updating password.');
     } finally {
       setLoading(false);
     }
@@ -160,10 +154,10 @@ const ResetPasswordPage: React.FC = () => {
               </svg>
             </div>
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-              Restablecer contraseña
+              Reset Password
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Ingresa tu nueva contraseña para completar el proceso
+              Enter your new password to complete the process
             </p>
           </div>
 
@@ -171,7 +165,7 @@ const ResetPasswordPage: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                  Nueva contraseña
+                  New Password
                 </label>
                 <div className="mt-1 relative">
                   <input 
@@ -182,7 +176,7 @@ const ResetPasswordPage: React.FC = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[#4FD1C5] focus:border-[#4FD1C5] focus:z-10 sm:text-sm"
-                    placeholder="Ingresa tu nueva contraseña"
+                    placeholder="Enter your new password"
                     minLength={6}
                   />
                 </div>
@@ -190,7 +184,7 @@ const ResetPasswordPage: React.FC = () => {
               
               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-                  Confirmar contraseña
+                  Confirm Password
                 </label>
                 <div className="mt-1 relative">
                   <input 
@@ -203,7 +197,7 @@ const ResetPasswordPage: React.FC = () => {
                     className={`appearance-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[#4FD1C5] focus:border-[#4FD1C5] focus:z-10 sm:text-sm ${
                       confirmPassword && password !== confirmPassword ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="Confirma tu nueva contraseña"
+                    placeholder="Confirm your new password"
                     minLength={6}
                   />
                 </div>
@@ -243,7 +237,7 @@ const ResetPasswordPage: React.FC = () => {
                 disabled={loading}
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#4FD1C5] hover:bg-[#4FD1C5]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4FD1C5] transition-colors duration-200 disabled:opacity-50"
               >
-                <span>{loading ? 'Procesando...' : 'Restablecer contraseña'}</span>
+                                 <span>{loading ? 'Processing...' : 'Reset Password'}</span>
                 {loading && (
                   <span className="ml-2">
                     <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -257,15 +251,15 @@ const ResetPasswordPage: React.FC = () => {
           </form>
 
           <div className="text-center">
-            <p className="text-xs text-gray-500">
-              ¿Recordaste tu contraseña? 
-              <button
-                onClick={() => navigate('/')}
-                className="font-medium text-[#4FD1C5] hover:text-[#4FD1C5]/80 ml-1"
-              >
-                Iniciar sesión
-              </button>
-            </p>
+                         <p className="text-xs text-gray-500">
+               Remembered your password? 
+               <button
+                 onClick={() => navigate('/')}
+                 className="font-medium text-[#4FD1C5] hover:text-[#4FD1C5]/80 ml-1"
+               >
+                 Sign in
+               </button>
+             </p>
           </div>
         </div>
       </div>
