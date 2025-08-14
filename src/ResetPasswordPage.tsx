@@ -20,6 +20,14 @@ const ResetPasswordPage: React.FC = () => {
 
   const supabase = window.supabase?.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+  // Verificar que Supabase esté disponible
+  useEffect(() => {
+    if (!window.supabase) {
+      showMessage('error', 'Error: Supabase no está disponible. Recarga la página.');
+      return;
+    }
+  }, []);
+
   const showMessage = (type: 'success' | 'error', text: string) => {
     setMessage({ type, text });
   };
@@ -40,12 +48,25 @@ const ResetPasswordPage: React.FC = () => {
 
   const initializeAuth = async () => {
     try {
+      // Verificar que Supabase esté disponible
+      if (!window.supabase) {
+        showMessage('error', 'Error: Supabase no está disponible. Recarga la página.');
+        return;
+      }
+
+      // Verificar que el cliente se haya creado correctamente
+      if (!supabase) {
+        showMessage('error', 'Error: No se pudo crear el cliente de Supabase.');
+        return;
+      }
+
       const { data, error } = await supabase.auth.getSessionFromUrl({ 
         storeSession: true 
       });
       
       if (error) {
-        showMessage('error', 'Error al autenticar. Verifica que el enlace sea válido.');
+        console.error('Supabase auth error:', error);
+        showMessage('error', `Error al autenticar: ${error.message}`);
         return;
       }
       
@@ -57,6 +78,7 @@ const ResetPasswordPage: React.FC = () => {
       }
       
     } catch (error) {
+      console.error('Unexpected error during auth:', error);
       showMessage('error', 'Error inesperado durante la autenticación.');
     }
   };
