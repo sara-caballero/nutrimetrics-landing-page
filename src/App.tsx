@@ -5,6 +5,7 @@ import { translations, Language } from './translations';
 import PrivacyPage from './PrivacyPage';
 import ComingSoonPage from './ComingSoonPage';
 import TermsPage from './TermsPage';
+import ResetPasswordPage from './ResetPasswordPage';
 import logoImage from '/splash-icon.png';
 import homeImage from '/home.png';
 import statsImage from '/stats.png';
@@ -885,6 +886,10 @@ function ComingSoonPageWrapper() {
   return <ComingSoonPage language="en" onBack={() => navigate('/')} />;
 }
 
+function ResetPasswordPageWrapper() {
+  return <ResetPasswordPage />;
+}
+
 // Componente principal App con enrutamiento
 function App() {
   return (
@@ -894,6 +899,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPageWrapper />} />
         <Route path="/terms" element={<TermsPageWrapper />} />
         <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
+        <Route path="/reset-password.html" element={<ResetPasswordPageWrapper />} />
       </Routes>
     </Router>
   );
