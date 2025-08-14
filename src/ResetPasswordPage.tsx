@@ -250,17 +250,17 @@ const ResetPasswordPage: React.FC = () => {
             </div>
           </form>
 
-          <div className="text-center">
-                         <p className="text-xs text-gray-500">
-               Remembered your password? 
-               <button
-                 onClick={() => navigate('/')}
-                 className="font-medium text-[#4FD1C5] hover:text-[#4FD1C5]/80 ml-1"
-               >
-                 Sign in
-               </button>
-             </p>
-          </div>
+                     <div className="text-center">
+                          <p className="text-xs text-gray-500">
+                Back to 
+                <button
+                  onClick={() => navigate('/')}
+                  className="font-medium text-[#4FD1C5] hover:text-[#4FD1C5]/80 ml-1"
+                >
+                  Nutrimetrics
+                </button>
+              </p>
+           </div>
         </div>
       </div>
     </div>
