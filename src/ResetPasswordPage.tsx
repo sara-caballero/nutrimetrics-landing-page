@@ -60,21 +60,46 @@ const ResetPasswordPage: React.FC = () => {
         return;
       }
 
-      const { data, error } = await supabase.auth.getSessionFromUrl({ 
-        storeSession: true 
-      });
-      
-      if (error) {
-        console.error('Supabase auth error:', error);
-        showMessage('error', `Error al autenticar: ${error.message}`);
-        return;
-      }
-      
-      if (data.session) {
-        setIsAuthenticated(true);
-        showMessage('success', 'Autenticación exitosa. Puedes cambiar tu contraseña.');
+      // Procesar la URL para obtener el token de acceso
+      const urlParams = new URLSearchParams(window.location.hash.substring(1));
+      const accessToken = urlParams.get('access_token');
+      const refreshToken = urlParams.get('refresh_token');
+
+      if (accessToken) {
+        // Establecer la sesión manualmente
+        const { data, error } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken || ''
+        });
+
+        if (error) {
+          console.error('Supabase auth error:', error);
+          showMessage('error', `Error al autenticar: ${error.message}`);
+          return;
+        }
+
+        if (data.session) {
+          setIsAuthenticated(true);
+          showMessage('success', 'Autenticación exitosa. Puedes cambiar tu contraseña.');
+        } else {
+          showMessage('error', 'Enlace inválido o expirado. Solicita un nuevo enlace de restablecimiento.');
+        }
       } else {
-        showMessage('error', 'Enlace inválido o expirado. Solicita un nuevo enlace de restablecimiento.');
+        // Verificar si ya hay una sesión activa
+        const { data, error } = await supabase.auth.getSession();
+        
+        if (error) {
+          console.error('Supabase auth error:', error);
+          showMessage('error', `Error al autenticar: ${error.message}`);
+          return;
+        }
+        
+        if (data.session) {
+          setIsAuthenticated(true);
+          showMessage('success', 'Autenticación exitosa. Puedes cambiar tu contraseña.');
+        } else {
+          showMessage('error', 'Enlace inválido o expirado. Solicita un nuevo enlace de restablecimiento.');
+        }
       }
       
     } catch (error) {
