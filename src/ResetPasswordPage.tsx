@@ -67,11 +67,22 @@ const ResetPasswordPage: React.FC = () => {
         const searchParams = new URLSearchParams(window.location.search);
         const hashParams = new URLSearchParams(window.location.hash.substring(1));
         
+        console.log('🔍 [DEBUG] Raw search params:', window.location.search);
+        console.log('🔍 [DEBUG] Raw hash params:', window.location.hash);
+        
         const token = searchParams.get('token');
         const type = searchParams.get('type');
         const code = searchParams.get('code');
         const accessToken = hashParams.get('access_token');
         const refreshToken = hashParams.get('refresh_token');
+        
+        console.log('🔍 [DEBUG] Individual params:', {
+          token: token,
+          type: type,
+          code: code,
+          accessToken: accessToken,
+          refreshToken: refreshToken
+        });
         
         const error = searchParams.get('error');
         const errorCode = searchParams.get('error_code');
@@ -87,6 +98,10 @@ const ResetPasswordPage: React.FC = () => {
           errorCode,
           errorDescription
         });
+        
+        console.log('🔍 [DEBUG] Code value:', code);
+        console.log('🔍 [DEBUG] Code type:', typeof code);
+        console.log('🔍 [DEBUG] Code length:', code ? code.length : 0);
         
         if (error) {
           console.error('❌ [DEBUG] Error in URL params:', { error, errorCode, errorDescription });
