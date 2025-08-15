@@ -111,10 +111,10 @@ const ResetPasswordPage: React.FC = () => {
         }
 
         if (code) {
-          console.log('🔍 [DEBUG] Attempting to get session from URL with code');
-          const { data, error } = await supabase.auth.getSessionFromUrl();
+          console.log('🔍 [DEBUG] Attempting OAuth code exchange');
+          const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
-          console.log('🔍 [DEBUG] getSessionFromUrl result:', { 
+          console.log('🔍 [DEBUG] exchangeCodeForSession result:', { 
             hasData: !!data, 
             hasSession: !!data?.session, 
             error: error?.message 
@@ -127,11 +127,11 @@ const ResetPasswordPage: React.FC = () => {
           }
 
           if (data.session) {
-            console.log('✅ [DEBUG] Session from URL successful');
+            console.log('✅ [DEBUG] OAuth code exchange successful');
             setIsAuthenticated(true);
             showMessage('success', 'Authentication successful. You can now change your password.');
           } else {
-            console.error('❌ [DEBUG] Session from URL failed - no session');
+            console.error('❌ [DEBUG] OAuth code exchange failed - no session');
             showMessage('error', 'Invalid or expired link. Please request a new reset link.');
           }
         } else if (token && type === 'recovery') {
