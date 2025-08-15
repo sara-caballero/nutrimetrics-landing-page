@@ -47,12 +47,19 @@ const ResetPasswordPage: React.FC = () => {
 
     const initializeAuth = async () => {
     try {
+        console.log('🔍 [DEBUG] Starting initializeAuth...');
+        console.log('🔍 [DEBUG] Current URL:', window.location.href);
+        console.log('🔍 [DEBUG] Search params:', window.location.search);
+        console.log('🔍 [DEBUG] Hash params:', window.location.hash);
+        
         if (!window.supabase) {
+          console.error('❌ [DEBUG] Supabase not available');
           showMessage('error', 'Error: Supabase is not available. Please reload the page.');
           return;
         }
 
         if (!supabase) {
+          console.error('❌ [DEBUG] Could not create Supabase client');
           showMessage('error', 'Error: Could not create Supabase client.');
           return;
         }
@@ -69,31 +76,52 @@ const ResetPasswordPage: React.FC = () => {
         const errorCode = searchParams.get('error_code');
         const errorDescription = searchParams.get('error_description');
         
+        console.log('🔍 [DEBUG] Parsed params:', {
+          token: token ? `${token.substring(0, 10)}...` : null,
+          type,
+          accessToken: accessToken ? `${accessToken.substring(0, 10)}...` : null,
+          refreshToken: refreshToken ? `${refreshToken.substring(0, 10)}...` : null,
+          error,
+          errorCode,
+          errorDescription
+        });
+        
         if (error) {
+          console.error('❌ [DEBUG] Error in URL params:', { error, errorCode, errorDescription });
           showMessage('error', `Authentication failed: ${errorDescription || error}`);
           window.history.replaceState({}, document.title, window.location.pathname);
           return;
         }
 
         if (token && type === 'recovery') {
+          console.log('🔍 [DEBUG] Attempting PKCE flow with token and type recovery');
           const { data, error } = await supabase.auth.verifyOtp({
             token_hash: token,
             type: 'recovery'
           });
 
+          console.log('🔍 [DEBUG] verifyOtp result:', { 
+            hasData: !!data, 
+            hasSession: !!data?.session, 
+            error: error?.message 
+          });
+
           if (error) {
-            console.error('Supabase auth error:', error);
+            console.error('❌ [DEBUG] Supabase auth error:', error);
             showMessage('error', `Authentication error: ${error.message}`);
             return;
           }
 
           if (data.session) {
+            console.log('✅ [DEBUG] PKCE authentication successful');
             setIsAuthenticated(true);
             showMessage('success', 'Authentication successful. You can now change your password.');
           } else {
+            console.error('❌ [DEBUG] PKCE authentication failed - no session');
             showMessage('error', 'Invalid or expired link. Please request a new reset link.');
           }
         } else if (accessToken) {
+          console.log('🔍 [DEBUG] Attempting Implicit flow with access token');
           const { data, error } = await supabase.auth.setSession({
             access_token: accessToken,
             refresh_token: refreshToken || ''
@@ -112,18 +140,27 @@ const ResetPasswordPage: React.FC = () => {
             showMessage('error', 'Invalid or expired link. Please request a new reset link.');
           }
         } else {
+          console.log('🔍 [DEBUG] No tokens found, checking existing session');
           const { data, error } = await supabase.auth.getSession();
           
+          console.log('🔍 [DEBUG] getSession result:', { 
+            hasData: !!data, 
+            hasSession: !!data?.session, 
+            error: error?.message 
+          });
+          
           if (error) {
-            console.error('Supabase auth error:', error);
+            console.error('❌ [DEBUG] Supabase auth error:', error);
             showMessage('error', `Authentication error: ${error.message}`);
             return;
           }
           
           if (data.session) {
+            console.log('✅ [DEBUG] Existing session found');
             setIsAuthenticated(true);
             showMessage('success', 'Authentication successful. You can now change your password.');
           } else {
+            console.error('❌ [DEBUG] No existing session found');
             showMessage('error', 'Invalid or expired link. Please request a new reset link.');
           }
         }
