@@ -57,45 +57,67 @@ const ResetPasswordPage: React.FC = () => {
           return;
         }
 
-       const urlParams = new URLSearchParams(window.location.hash.substring(1));
-       const accessToken = urlParams.get('access_token');
-       const refreshToken = urlParams.get('refresh_token');
+        const searchParams = new URLSearchParams(window.location.search);
+        const hashParams = new URLSearchParams(window.location.hash.substring(1));
+        
+        const token = searchParams.get('token');
+        const type = searchParams.get('type');
+        const accessToken = hashParams.get('access_token');
+        const refreshToken = hashParams.get('refresh_token');
 
-       if (accessToken) {
-         const { data, error } = await supabase.auth.setSession({
-           access_token: accessToken,
-           refresh_token: refreshToken || ''
-         });
+        if (token && type === 'recovery') {
+          const { data, error } = await supabase.auth.verifyOtp({
+            token_hash: token,
+            type: 'recovery'
+          });
 
-         if (error) {
-           console.error('Supabase auth error:', error);
-           showMessage('error', `Authentication error: ${error.message}`);
-           return;
-         }
+          if (error) {
+            console.error('Supabase auth error:', error);
+            showMessage('error', `Authentication error: ${error.message}`);
+            return;
+          }
 
-         if (data.session) {
-           setIsAuthenticated(true);
-           showMessage('success', 'Authentication successful. You can now change your password.');
-         } else {
-           showMessage('error', 'Invalid or expired link. Please request a new reset link.');
-         }
-       } else {
-         const { data, error } = await supabase.auth.getSession();
-         
-         if (error) {
-           console.error('Supabase auth error:', error);
-           showMessage('error', `Authentication error: ${error.message}`);
-           return;
-         }
-         
-         if (data.session) {
-           setIsAuthenticated(true);
-           showMessage('success', 'Authentication successful. You can now change your password.');
-         } else {
-           showMessage('error', 'Invalid or expired link. Please request a new reset link.');
-         }
-       }
-       
+          if (data.session) {
+            setIsAuthenticated(true);
+            showMessage('success', 'Authentication successful. You can now change your password.');
+          } else {
+            showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+          }
+        } else if (accessToken) {
+          const { data, error } = await supabase.auth.setSession({
+            access_token: accessToken,
+            refresh_token: refreshToken || ''
+          });
+
+          if (error) {
+            console.error('Supabase auth error:', error);
+            showMessage('error', `Authentication error: ${error.message}`);
+            return;
+          }
+
+          if (data.session) {
+            setIsAuthenticated(true);
+            showMessage('success', 'Authentication successful. You can now change your password.');
+          } else {
+            showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+          }
+        } else {
+          const { data, error } = await supabase.auth.getSession();
+          
+          if (error) {
+            console.error('Supabase auth error:', error);
+            showMessage('error', `Authentication error: ${error.message}`);
+            return;
+          }
+          
+          if (data.session) {
+            setIsAuthenticated(true);
+            showMessage('success', 'Authentication successful. You can now change your password.');
+          } else {
+            showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+          }
+        }
+        
      } catch (error) {
        console.error('Unexpected error during auth:', error);
        showMessage('error', 'Unexpected error during authentication.');
