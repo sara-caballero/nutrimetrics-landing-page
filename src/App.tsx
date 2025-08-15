@@ -900,6 +900,7 @@ function App() {
         <Route path="/terms" element={<TermsPageWrapper />} />
         <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
         <Route path="/reset-password.html" element={<ResetPasswordPageWrapper />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </Router>
   );
