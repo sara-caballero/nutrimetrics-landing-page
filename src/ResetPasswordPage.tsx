@@ -69,6 +69,7 @@ const ResetPasswordPage: React.FC = () => {
         
         const token = searchParams.get('token');
         const type = searchParams.get('type');
+        const code = searchParams.get('code');
         const accessToken = hashParams.get('access_token');
         const refreshToken = hashParams.get('refresh_token');
         
@@ -79,6 +80,7 @@ const ResetPasswordPage: React.FC = () => {
         console.log('🔍 [DEBUG] Parsed params:', {
           token: token ? `${token.substring(0, 10)}...` : null,
           type,
+          code: code ? `${code.substring(0, 10)}...` : null,
           accessToken: accessToken ? `${accessToken.substring(0, 10)}...` : null,
           refreshToken: refreshToken ? `${refreshToken.substring(0, 10)}...` : null,
           error,
@@ -93,7 +95,31 @@ const ResetPasswordPage: React.FC = () => {
           return;
         }
 
-        if (token && type === 'recovery') {
+        if (code) {
+          console.log('🔍 [DEBUG] Attempting OAuth code exchange');
+          const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+
+          console.log('🔍 [DEBUG] exchangeCodeForSession result:', { 
+            hasData: !!data, 
+            hasSession: !!data?.session, 
+            error: error?.message 
+          });
+
+          if (error) {
+            console.error('❌ [DEBUG] Supabase auth error:', error);
+            showMessage('error', `Authentication error: ${error.message}`);
+            return;
+          }
+
+          if (data.session) {
+            console.log('✅ [DEBUG] OAuth code exchange successful');
+            setIsAuthenticated(true);
+            showMessage('success', 'Authentication successful. You can now change your password.');
+          } else {
+            console.error('❌ [DEBUG] OAuth code exchange failed - no session');
+            showMessage('error', 'Invalid or expired link. Please request a new reset link.');
+          }
+        } else if (token && type === 'recovery') {
           console.log('🔍 [DEBUG] Attempting PKCE flow with token and type recovery');
           const { data, error } = await supabase.auth.verifyOtp({
             token_hash: token,
