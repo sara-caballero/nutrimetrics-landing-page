@@ -64,6 +64,16 @@ const ResetPasswordPage: React.FC = () => {
         const type = searchParams.get('type');
         const accessToken = hashParams.get('access_token');
         const refreshToken = hashParams.get('refresh_token');
+        
+        const error = searchParams.get('error');
+        const errorCode = searchParams.get('error_code');
+        const errorDescription = searchParams.get('error_description');
+        
+        if (error) {
+          showMessage('error', `Authentication failed: ${errorDescription || error}`);
+          window.history.replaceState({}, document.title, window.location.pathname);
+          return;
+        }
 
         if (token && type === 'recovery') {
           const { data, error } = await supabase.auth.verifyOtp({
