@@ -111,10 +111,13 @@ const ResetPasswordPage: React.FC = () => {
         }
 
         if (code) {
-          console.log('🔍 [DEBUG] Attempting OAuth code exchange');
-          const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+          console.log('🔍 [DEBUG] Attempting recovery with code as token');
+          const { data, error } = await supabase.auth.verifyOtp({
+            token_hash: code,
+            type: 'recovery'
+          });
 
-          console.log('🔍 [DEBUG] exchangeCodeForSession result:', { 
+          console.log('🔍 [DEBUG] verifyOtp result:', { 
             hasData: !!data, 
             hasSession: !!data?.session, 
             error: error?.message 
@@ -127,11 +130,11 @@ const ResetPasswordPage: React.FC = () => {
           }
 
           if (data.session) {
-            console.log('✅ [DEBUG] OAuth code exchange successful');
+            console.log('✅ [DEBUG] Recovery authentication successful');
             setIsAuthenticated(true);
             showMessage('success', 'Authentication successful. You can now change your password.');
           } else {
-            console.error('❌ [DEBUG] OAuth code exchange failed - no session');
+            console.error('❌ [DEBUG] Recovery authentication failed - no session');
             showMessage('error', 'Invalid or expired link. Please request a new reset link.');
           }
         } else if (token && type === 'recovery') {
