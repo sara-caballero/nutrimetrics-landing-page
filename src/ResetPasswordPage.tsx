@@ -36,7 +36,7 @@ const ResetPasswordPage: React.FC = () => {
       if (error_code) {
         setMessage({ 
           type: 'error', 
-          text: error_description || 'El enlace no es válido o expiró.' 
+          text: error_description || 'The link is not valid or has expired.' 
         });
         setReady(true);
         return;
@@ -45,7 +45,7 @@ const ResetPasswordPage: React.FC = () => {
       if (!access_token || !refresh_token) {
         setMessage({ 
           type: 'error', 
-          text: 'Enlace inválido o incompleto. Solicita otro enlace de recuperación.' 
+          text: 'Invalid or incomplete link. Please request a new recovery link.' 
         });
         setReady(true);
         return;
@@ -67,12 +67,12 @@ const ResetPasswordPage: React.FC = () => {
         setSessionOk(true);
         setMessage({ 
           type: 'success', 
-          text: 'Enlace válido. Puedes cambiar tu contraseña.' 
+          text: 'Valid link. You can now change your password.' 
         });
       } catch (e: any) {
         setMessage({ 
           type: 'error', 
-          text: e?.message || 'No se pudo validar el enlace. Solicita uno nuevo.' 
+          text: e?.message || 'Could not validate the link. Please request a new one.' 
         });
       } finally {
         setReady(true);
