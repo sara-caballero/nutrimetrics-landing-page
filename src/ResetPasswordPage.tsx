@@ -85,11 +85,22 @@ const ResetPasswordPage: React.FC = () => {
   };
 
   const validatePasswords = () => {
-    if (password.length < 6) {
-      showMessage('error', 'Password must be at least 6 characters long');
+    if (password.length < 8) {
+      showMessage('error', 'Password must be at least 8 characters long');
       return false;
     }
-    
+    if (!/[A-Z]/.test(password)) {
+      showMessage('error', 'Password must contain at least 1 uppercase letter');
+      return false;
+    }
+    if (!/[a-z]/.test(password)) {
+      showMessage('error', 'Password must contain at least 1 lowercase letter');
+      return false;
+    }
+    if (!/[0-9]/.test(password)) {
+      showMessage('error', 'Password must contain at least 1 number');
+      return false;
+    }
     if (password !== confirmPassword) {
       showMessage('error', 'Passwords do not match');
       return false;
@@ -204,24 +215,45 @@ const ResetPasswordPage: React.FC = () => {
           {sessionOk && (
             <form onSubmit={handleSubmit} className="mt-8 space-y-6">
               <div className="space-y-4">
-                <div>
-                  <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                    New Password
-                  </label>
-                  <div className="mt-1 relative">
-                    <input 
-                      id="password" 
-                      name="password" 
-                      type="password" 
-                      required 
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[#4FD1C5] focus:border-[#4FD1C5] focus:z-10 sm:text-sm"
-                      placeholder="Enter your new password"
-                      minLength={6}
-                    />
-                  </div>
-                </div>
+                                 <div>
+                   <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                     New Password
+                   </label>
+                   <div className="mt-1 relative">
+                     <input 
+                       id="password" 
+                       name="password" 
+                       type="password" 
+                       required 
+                       value={password}
+                       onChange={(e) => setPassword(e.target.value)}
+                       className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[#4FD1C5] focus:border-[#4FD1C5] focus:z-10 sm:text-sm"
+                       placeholder="Enter your new password"
+                       minLength={8}
+                     />
+                   </div>
+                   <div className="mt-2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                     <p className="text-xs font-medium text-gray-600 mb-2">Password requirements:</p>
+                     <ul className="space-y-1">
+                       <li className={`flex items-center text-xs ${password.length >= 8 ? 'text-green-600' : 'text-gray-500'}`}>
+                         <span className="mr-2">{password.length >= 8 ? '✓' : '○'}</span>
+                         At least 8 characters
+                       </li>
+                       <li className={`flex items-center text-xs ${/[A-Z]/.test(password) ? 'text-green-600' : 'text-gray-500'}`}>
+                         <span className="mr-2">{/[A-Z]/.test(password) ? '✓' : '○'}</span>
+                         At least 1 uppercase letter
+                       </li>
+                       <li className={`flex items-center text-xs ${/[a-z]/.test(password) ? 'text-green-600' : 'text-gray-500'}`}>
+                         <span className="mr-2">{/[a-z]/.test(password) ? '✓' : '○'}</span>
+                         At least 1 lowercase letter
+                       </li>
+                       <li className={`flex items-center text-xs ${/[0-9]/.test(password) ? 'text-green-600' : 'text-gray-500'}`}>
+                         <span className="mr-2">{/[0-9]/.test(password) ? '✓' : '○'}</span>
+                         At least 1 number
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
                 
                 <div>
                   <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
