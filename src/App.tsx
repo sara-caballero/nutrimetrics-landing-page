@@ -7,6 +7,7 @@ import ComingSoonPage from './ComingSoonPage';
 import TermsPage from './TermsPage';
 import ResetPasswordPage from './ResetPasswordPage';
 import logoImage from '/splash-icon.png';
+import nutrimetricsLogo from '/Nutrimetrics.png';
 import homeImage from '/home.png';
 import statsImage from '/stats.png';
 import analyseImage from '/analyse.png';
@@ -70,9 +71,9 @@ function HomePage() {
             <div className="flex items-center">
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
-                  <img src={logoImage} alt="Nutrimetrics Logo" className="w-6 h-6 sm:w-10 sm:h-10" />
+                  <img src={logoImage} alt="Nutrimetrics Icon" className="w-6 h-6 sm:w-10 sm:h-10" />
                 </div>
-                <span className="text-lg sm:text-2xl font-bold text-[#4FD1C5]">Nutrimetrics</span>
+                <img src={nutrimetricsLogo} alt="Nutrimetrics" className="h-6 sm:h-8" />
               </div>
             </div>
             
