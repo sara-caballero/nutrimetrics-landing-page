@@ -73,7 +73,7 @@ function HomePage() {
                 <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
                   <img src={logoImage} alt="Nutrimetrics Icon" className="w-6 h-6 sm:w-10 sm:h-10" />
                 </div>
-                <img src={nutrimetricsLogo} alt="Nutrimetrics" className="h-6 sm:h-8" />
+                <img src={nutrimetricsLogo} alt="Nutrimetrics" className="h-8 sm:h-10" />
               </div>
             </div>
             
