@@ -166,7 +166,7 @@ export const translations = {
     privacyLastUpdated: "Last updated: September 11, 2025",
     
     privacySection1Title: "1. Who We Are",
-    privacySection1Content: "This mobile app (\"Nutrimetrics\") is developed and maintained by Pixel Ventures. If you have any questions or want to exercise your privacy rights, you can contact us (see section 13).",
+    privacySection1Content: "This mobile app (\"Nutrimetrics\") is developed and maintained by Pixel Ventures. If you have any questions or want to exercise your privacy rights, you can contact us (see section 12).",
     
     privacySection2Title: "2. What Personal Data We Collect and Why",
     privacySection2Content: "Most features are usable without providing health data. No data is collected without your consent.\n\nData Category Purpose Legal Basis (GDPR Art. 6)\n\n• Email, password hash, session tokens - Identifiers - Authentication - Contract (Art. 6.1.b)\n• First name, age, gender, height, weight, locale, language - Profile & health data - Personalized nutrition feedback - Explicit consent (Art. 6.1.a & 9.2.a)\n• Food photos, AI-generated nutrition estimates - Special category (health) - Dietary tracking - Explicit consent (Art. 6.1.a & 9.2.a)\n• Activity logs, weight history - Health-related data - Progress tracking - Contract (Art. 6.1.b)\n• Push tokens - Technical - Notification delivery - Consent (Art. 6.1.a)\n• Device info, logs, theme, offline status - Diagnostics - App stability & performance - Legitimate interest (Art. 6.1.f)",
@@ -198,12 +198,12 @@ export const translations = {
     privacySection11Title: "11. Updates to This Policy",
     privacySection11Content: "We may update this Privacy Policy to reflect:\n\n• Changes in legal requirements\n• New app features\n• Evolving data practices\n\nThe latest version will always be available at: https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "13. Contact",
+    privacySection12Title: "12. Contact",
     privacySection12Content: "Email: support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Terms of Use – Nutrimetrics App",
-    termsLastUpdated: "Last updated: August 4, 2025",
+    termsLastUpdated: "Last updated: September 11, 2025",
     
     termsSection1Title: "1. Acceptance of Terms",
     termsSection1Content: "By downloading, installing, or using the Nutrimetrics mobile application, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree, do not use the app.",
@@ -407,7 +407,7 @@ export const translations = {
     privacyLastUpdated: "Última actualización: 11 de septiembre de 2025",
     
     privacySection1Title: "1. Quiénes Somos",
-    privacySection1Content: "Esta aplicación móvil (\"Nutrimetrics\") es desarrollada y mantenida por Pixel Ventures. Si tienes alguna pregunta o quieres ejercer tus derechos de privacidad, puedes contactarnos (ver sección 13).",
+    privacySection1Content: "Esta aplicación móvil (\"Nutrimetrics\") es desarrollada y mantenida por Pixel Ventures. Si tienes alguna pregunta o quieres ejercer tus derechos de privacidad, puedes contactarnos (ver sección 12).",
     
     privacySection2Title: "2. Qué Datos Personales Recopilamos y Por Qué",
     privacySection2Content: "La mayoría de las funciones son utilizables sin proporcionar datos de salud. No se recopilan datos sin tu consentimiento.\n\nDatos Categoría Propósito Base Legal (GDPR Art. 6)\n\n• Email, hash de contraseña, tokens de sesión - Identificadores - Autenticación - Contrato (Art. 6.1.b)\n• Nombre, edad, género, altura, peso, ubicación, idioma - Datos de perfil y salud - Retroalimentación nutricional personalizada - Consentimiento explícito (Art. 6.1.a & 9.2.a)\n• Fotos de comida, estimaciones nutricionales generadas por IA - Categoría especial (salud) - Seguimiento dietético - Consentimiento explícito (Art. 6.1.a & 9.2.a)\n• Registros de actividad, historial de peso - Datos relacionados con la salud - Seguimiento de progreso - Contrato (Art. 6.1.b)\n• Tokens push - Técnicos - Entrega de notificaciones - Consentimiento (Art. 6.1.a)\n• Información del dispositivo, registros, tema, estado offline - Diagnósticos - Estabilidad y rendimiento de la app - Interés legítimo (Art. 6.1.f)",
@@ -439,12 +439,12 @@ export const translations = {
     privacySection11Title: "11. Actualizaciones de Esta Política",
     privacySection11Content: "Podemos actualizar esta Política de Privacidad para reflejar:\n\n• Cambios en requisitos legales\n• Nuevas funciones de la app\n• Prácticas de datos en evolución\n\nLa última versión siempre estará disponible en: https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "13. Contacto",
+    privacySection12Title: "12. Contacto",
     privacySection12Content: "Email: support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Términos de Uso – Aplicación Nutrimetrics",
-    termsLastUpdated: "Última actualización: 4 de agosto de 2025",
+    termsLastUpdated: "Última actualización: 11 de septiembre de 2025",
     
     termsSection1Title: "1. Aceptación de Términos",
     termsSection1Content: "Al descargar, instalar o usar la aplicación móvil Nutrimetrics, aceptas estar sujeto a estos Términos de Uso y nuestra Política de Privacidad. Si no estás de acuerdo, no uses la aplicación.",
@@ -648,7 +648,7 @@ export const translations = {
     privacyLastUpdated: "Dernière mise à jour : 11 septembre 2025",
     
     privacySection1Title: "1. Qui Nous Sommes",
-    privacySection1Content: "Cette application mobile (\"Nutrimetrics\") est développée et maintenue par Pixel Ventures. Si vous avez des questions ou souhaitez exercer vos droits de confidentialité, vous pouvez nous contacter (voir section 13).",
+    privacySection1Content: "Cette application mobile (\"Nutrimetrics\") est développée et maintenue par Pixel Ventures. Si vous avez des questions ou souhaitez exercer vos droits de confidentialité, vous pouvez nous contacter (voir section 12).",
     
     privacySection2Title: "2. Quelles Données Personnelles Nous Collectons et Pourquoi",
     privacySection2Content: "La plupart des fonctionnalités sont utilisables sans fournir de données de santé. Aucune donnée n'est collectée sans votre consentement.\n\nDonnées Catégorie Objectif Base Légale (RGPD Art. 6)\n\n• Email, hash de mot de passe, jetons de session - Identifiants - Authentification - Contrat (Art. 6.1.b)\n• Prénom, âge, genre, taille, poids, localisation, langue - Données de profil et santé - Retour nutritionnel personnalisé - Consentement explicite (Art. 6.1.a & 9.2.a)\n• Photos d'aliments, estimations nutritionnelles générées par IA - Catégorie spéciale (santé) - Suivi alimentaire - Consentement explicite (Art. 6.1.a & 9.2.a)\n• Journaux d'activité, historique de poids - Données liées à la santé - Suivi des progrès - Contrat (Art. 6.1.b)\n• Jetons push - Techniques - Livraison de notifications - Consentement (Art. 6.1.a)\n• Informations sur l'appareil, journaux, thème, statut hors ligne - Diagnostics - Stabilité et performance de l'app - Intérêt légitime (Art. 6.1.f)",
@@ -680,12 +680,12 @@ export const translations = {
     privacySection11Title: "11. Mises à Jour de Cette Politique",
     privacySection11Content: "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter :\n\n• Changements dans les exigences légales\n• Nouvelles fonctionnalités de l'app\n• Pratiques de données en évolution\n\nLa dernière version sera toujours disponible à : https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "13. Contact",
+    privacySection12Title: "12. Contact",
     privacySection12Content: "Email : support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Conditions d'Utilisation – Application Nutrimetrics",
-    termsLastUpdated: "Dernière mise à jour : 4 août 2025",
+    termsLastUpdated: "Dernière mise à jour : 11 septembre 2025",
     
     termsSection1Title: "1. Acceptation des Conditions",
     termsSection1Content: "En téléchargeant, installant ou utilisant l'application mobile Nutrimetrics, vous acceptez d'être lié par ces Conditions d'Utilisation et notre Politique de Confidentialité. Si vous n'êtes pas d'accord, n'utilisez pas l'application.",

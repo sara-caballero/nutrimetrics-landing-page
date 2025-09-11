@@ -874,12 +874,32 @@ function HomePage() {
 // Componentes wrapper para manejar la navegación
 function PrivacyPageWrapper() {
   const navigate = useNavigate();
-  return <PrivacyPage language="en" onBack={() => navigate('/')} />;
+  const [language, setLanguage] = useState<Language>('en');
+  return <PrivacyPage language={language} onBack={() => {
+    navigate('/');
+    // Scroll to footer after navigation
+    setTimeout(() => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }} />;
 }
 
 function TermsPageWrapper() {
   const navigate = useNavigate();
-  return <TermsPage language="en" onBack={() => navigate('/')} />;
+  const [language, setLanguage] = useState<Language>('en');
+  return <TermsPage language={language} onBack={() => {
+    navigate('/');
+    // Scroll to footer after navigation
+    setTimeout(() => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }} />;
 }
 
 function ComingSoonPageWrapper() {
