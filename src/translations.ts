@@ -163,13 +163,13 @@ export const translations = {
     
     // Privacy Policy
     privacyPolicyTitle: "Privacy Policy – Nutrimetrics App",
-    privacyLastUpdated: "Last updated: August 4, 2025",
+    privacyLastUpdated: "Last updated: September 11, 2025",
     
     privacySection1Title: "1. Who We Are",
-    privacySection1Content: "This mobile app (\"Nutrimetrics\") is developed and maintained by an independent developer. If you have any questions or want to exercise your privacy rights, you can contact:\n\n📧 Email: support@nutrimetrics.app",
+    privacySection1Content: "This mobile app (\"Nutrimetrics\") is developed and maintained by Pixel Ventures. If you have any questions or want to exercise your privacy rights, you can contact us (see section 13).",
     
     privacySection2Title: "2. What Personal Data We Collect and Why",
-    privacySection2Content: "Most features are usable without providing health data. No data is collected without your consent.\n\nData Category Purpose Legal Basis (GDPR Art. 6)\n\n• Email, password hash, session tokens - Identifiers - Authentication - Contract (Art. 6.1.b)\n• First name, age, gender, height, weight, location, language - Profile & health data - Personalized nutrition feedback - Explicit consent (Art. 6.1.a & 9.2.a)\n• Food photos, AI-generated nutrition estimates - Special category (health) - Dietary tracking - Explicit consent (Art. 6.1.a & 9.2.a)\n• Activity logs, weight history - Health-related data - Progress tracking - Contract (Art. 6.1.b)\n• Push tokens - Technical - Notification delivery - Consent (Art. 6.1.a)\n• Device info, logs, theme, offline status - Diagnostics - App stability & performance - Legitimate interest (Art. 6.1.f)",
+    privacySection2Content: "Most features are usable without providing health data. No data is collected without your consent.\n\nData Category Purpose Legal Basis (GDPR Art. 6)\n\n• Email, password hash, session tokens - Identifiers - Authentication - Contract (Art. 6.1.b)\n• First name, age, gender, height, weight, locale, language - Profile & health data - Personalized nutrition feedback - Explicit consent (Art. 6.1.a & 9.2.a)\n• Food photos, AI-generated nutrition estimates - Special category (health) - Dietary tracking - Explicit consent (Art. 6.1.a & 9.2.a)\n• Activity logs, weight history - Health-related data - Progress tracking - Contract (Art. 6.1.b)\n• Push tokens - Technical - Notification delivery - Consent (Art. 6.1.a)\n• Device info, logs, theme, offline status - Diagnostics - App stability & performance - Legitimate interest (Art. 6.1.f)",
     
     privacySection3Title: "3. Third-Party Services (Data Processors)",
     privacySection3Content: "We may use third-party services to support features such as:\n\n• Authentication, database, and image storage\n• Nutrition analysis from food photos using AI\n• Push notifications and crash reporting (if enabled)\n\nThese providers only process personal data on our behalf and under strict data protection agreements. We do not share personal data with third parties for advertising or profiling.",
@@ -190,16 +190,16 @@ export const translations = {
     privacySection8Content: "We use third-party AI technologies to analyze food images and provide estimated nutritional feedback.\n\n• These analyses are based solely on the images you provide.\n• No automated decisions are made that produce legal or similarly significant effects on you.\n• Images are processed temporarily and not used to train external models.",
     
     privacySection9Title: "9. Consent & Permissions",
-    privacySection9Content: "You will always be asked for explicit consent before:\n\n• Collecting health or sensitive data (e.g., food photos, gender)\n• Accessing mobile permissions (e.g., camera, notifications)\n\nYou can withdraw consent anytime via the app settings.\n\nExample:\n\"This app analyzes your food photos using AI to estimate calories and nutrients. Photos are processed temporarily and with your consent.\"",
+    privacySection9Content: "You will always be asked for explicit consent before:\n\n• Collecting health or sensitive data (e.g., food photos, gender)\n• Accessing mobile permissions (e.g., camera, notifications)\n\nYou can withdraw certain consents (like notifications or camera access) by adjusting your device's system settings.",
     
-    privacySection10Title: "10. Use of Public Datasets",
-    privacySection10Content: "This app may use publicly available datasets (e.g., Open Food Facts) under open licenses such as:\n\n• Open Database License (ODbL)\n• Creative Commons Attribution ShareAlike (for images)\n\nThis data is collaborative and may contain inaccuracies.",
+    privacySection10Title: "10. Payment Data",
+    privacySection10Content: "If you choose to make purchases within the app, we may collect information necessary to process your payment (e.g., payment instrument number, associated security code).\n\nAll payment data is handled and stored by:\n\n• Apple App Store (Apple Inc.) – Privacy Policy\n• Google Play Store (Google LLC) – Privacy Policy\n• RevenueCat – Privacy Policy\n• Stripe – Privacy Policy\n\nWe do not store full payment details ourselves.",
     
     privacySection11Title: "11. Updates to This Policy",
-    privacySection11Content: "We may update this Privacy Policy to reflect:\n\n• Changes in legal requirements\n• New app features\n• Evolving data practices\n\nWe will notify you of significant updates via the app or email. The latest version will always be available at: 🔗 https://nutrimetrics.app/privacy",
+    privacySection11Content: "We may update this Privacy Policy to reflect:\n\n• Changes in legal requirements\n• New app features\n• Evolving data practices\n\nThe latest version will always be available at: https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "12. Contact",
-    privacySection12Content: "📧 Email: support@nutrimetrics.app",
+    privacySection12Title: "13. Contact",
+    privacySection12Content: "Email: support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Terms of Use – Nutrimetrics App",
@@ -404,10 +404,10 @@ export const translations = {
     
     // Privacy Policy
     privacyPolicyTitle: "Política de Privacidad – Aplicación Nutrimetrics",
-    privacyLastUpdated: "Última actualización: 4 de agosto de 2025",
+    privacyLastUpdated: "Última actualización: 11 de septiembre de 2025",
     
     privacySection1Title: "1. Quiénes Somos",
-    privacySection1Content: "Esta aplicación móvil (\"Nutrimetrics\") es desarrollada y mantenida por un desarrollador independiente. Si tienes alguna pregunta o quieres ejercer tus derechos de privacidad, puedes contactar:\n\n📧 Email: support@nutrimetrics.app",
+    privacySection1Content: "Esta aplicación móvil (\"Nutrimetrics\") es desarrollada y mantenida por Pixel Ventures. Si tienes alguna pregunta o quieres ejercer tus derechos de privacidad, puedes contactarnos (ver sección 13).",
     
     privacySection2Title: "2. Qué Datos Personales Recopilamos y Por Qué",
     privacySection2Content: "La mayoría de las funciones son utilizables sin proporcionar datos de salud. No se recopilan datos sin tu consentimiento.\n\nDatos Categoría Propósito Base Legal (GDPR Art. 6)\n\n• Email, hash de contraseña, tokens de sesión - Identificadores - Autenticación - Contrato (Art. 6.1.b)\n• Nombre, edad, género, altura, peso, ubicación, idioma - Datos de perfil y salud - Retroalimentación nutricional personalizada - Consentimiento explícito (Art. 6.1.a & 9.2.a)\n• Fotos de comida, estimaciones nutricionales generadas por IA - Categoría especial (salud) - Seguimiento dietético - Consentimiento explícito (Art. 6.1.a & 9.2.a)\n• Registros de actividad, historial de peso - Datos relacionados con la salud - Seguimiento de progreso - Contrato (Art. 6.1.b)\n• Tokens push - Técnicos - Entrega de notificaciones - Consentimiento (Art. 6.1.a)\n• Información del dispositivo, registros, tema, estado offline - Diagnósticos - Estabilidad y rendimiento de la app - Interés legítimo (Art. 6.1.f)",
@@ -431,16 +431,16 @@ export const translations = {
     privacySection8Content: "Usamos tecnologías de IA de terceros para analizar imágenes de comida y proporcionar retroalimentación nutricional estimada.\n\n• Estos análisis se basan únicamente en las imágenes que proporcionas.\n• No se toman decisiones automatizadas que produzcan efectos legales o similares significativos en ti.\n• Las imágenes se procesan temporalmente y no se usan para entrenar modelos externos.",
     
     privacySection9Title: "9. Consentimiento y Permisos",
-    privacySection9Content: "Siempre se te pedirá consentimiento explícito antes de:\n\n• Recopilar datos de salud o sensibles (ej., fotos de comida, género)\n• Acceder a permisos móviles (ej., cámara, notificaciones)\n\nPuedes retirar el consentimiento en cualquier momento vía la configuración de la app.\n\nEjemplo:\n\"Esta app analiza tus fotos de comida usando IA para estimar calorías y nutrientes. Las fotos se procesan temporalmente y con tu consentimiento.\"",
+    privacySection9Content: "Siempre se te pedirá consentimiento explícito antes de:\n\n• Recopilar datos de salud o sensibles (ej., fotos de comida, género)\n• Acceder a permisos móviles (ej., cámara, notificaciones)\n\nPuedes retirar ciertos consentimientos (como notificaciones o acceso a la cámara) ajustando la configuración del sistema de tu dispositivo.",
     
-    privacySection10Title: "10. Uso de Conjuntos de Datos Públicos",
-    privacySection10Content: "Esta app puede usar conjuntos de datos públicamente disponibles (ej., Open Food Facts) bajo licencias abiertas como:\n\n• Licencia de Base de Datos Abierta (ODbL)\n• Creative Commons Attribution ShareAlike (para imágenes)\n\nEstos datos son colaborativos y pueden contener inexactitudes.",
+    privacySection10Title: "10. Datos de Pago",
+    privacySection10Content: "Si eliges hacer compras dentro de la app, podemos recopilar información necesaria para procesar tu pago (ej., número del instrumento de pago, código de seguridad asociado).\n\nTodos los datos de pago son manejados y almacenados por:\n\n• Apple App Store (Apple Inc.) – Política de Privacidad\n• Google Play Store (Google LLC) – Política de Privacidad\n• RevenueCat – Política de Privacidad\n• Stripe – Política de Privacidad\n\nNo almacenamos los detalles completos de pago nosotros mismos.",
     
     privacySection11Title: "11. Actualizaciones de Esta Política",
-    privacySection11Content: "Podemos actualizar esta Política de Privacidad para reflejar:\n\n• Cambios en requisitos legales\n• Nuevas funciones de la app\n• Prácticas de datos en evolución\n\nTe notificaremos actualizaciones significativas vía la app o email. La última versión siempre estará disponible en: 🔗 https://nutrimetrics.app/privacy",
+    privacySection11Content: "Podemos actualizar esta Política de Privacidad para reflejar:\n\n• Cambios en requisitos legales\n• Nuevas funciones de la app\n• Prácticas de datos en evolución\n\nLa última versión siempre estará disponible en: https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "12. Contacto",
-    privacySection12Content: "📧 Email: support@nutrimetrics.app",
+    privacySection12Title: "13. Contacto",
+    privacySection12Content: "Email: support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Términos de Uso – Aplicación Nutrimetrics",
@@ -645,10 +645,10 @@ export const translations = {
     
     // Privacy Policy
     privacyPolicyTitle: "Politique de Confidentialité – Application Nutrimetrics",
-    privacyLastUpdated: "Dernière mise à jour : 4 août 2025",
+    privacyLastUpdated: "Dernière mise à jour : 11 septembre 2025",
     
     privacySection1Title: "1. Qui Nous Sommes",
-    privacySection1Content: "Cette application mobile (\"Nutrimetrics\") est développée et maintenue par un développeur indépendant. Si vous avez des questions ou souhaitez exercer vos droits de confidentialité, vous pouvez nous contacter :\n\n📧 Email : support@nutrimetrics.app",
+    privacySection1Content: "Cette application mobile (\"Nutrimetrics\") est développée et maintenue par Pixel Ventures. Si vous avez des questions ou souhaitez exercer vos droits de confidentialité, vous pouvez nous contacter (voir section 13).",
     
     privacySection2Title: "2. Quelles Données Personnelles Nous Collectons et Pourquoi",
     privacySection2Content: "La plupart des fonctionnalités sont utilisables sans fournir de données de santé. Aucune donnée n'est collectée sans votre consentement.\n\nDonnées Catégorie Objectif Base Légale (RGPD Art. 6)\n\n• Email, hash de mot de passe, jetons de session - Identifiants - Authentification - Contrat (Art. 6.1.b)\n• Prénom, âge, genre, taille, poids, localisation, langue - Données de profil et santé - Retour nutritionnel personnalisé - Consentement explicite (Art. 6.1.a & 9.2.a)\n• Photos d'aliments, estimations nutritionnelles générées par IA - Catégorie spéciale (santé) - Suivi alimentaire - Consentement explicite (Art. 6.1.a & 9.2.a)\n• Journaux d'activité, historique de poids - Données liées à la santé - Suivi des progrès - Contrat (Art. 6.1.b)\n• Jetons push - Techniques - Livraison de notifications - Consentement (Art. 6.1.a)\n• Informations sur l'appareil, journaux, thème, statut hors ligne - Diagnostics - Stabilité et performance de l'app - Intérêt légitime (Art. 6.1.f)",
@@ -672,16 +672,16 @@ export const translations = {
     privacySection8Content: "Nous utilisons des technologies d'IA tierces pour analyser les images d'aliments et fournir des retours nutritionnels estimés.\n\n• Ces analyses sont basées uniquement sur les images que vous fournissez.\n• Aucune décision automatisée n'est prise qui produise des effets juridiques ou similaires significatifs sur vous.\n• Les images sont traitées temporairement et ne sont pas utilisées pour entraîner des modèles externes.",
     
     privacySection9Title: "9. Consentement et Permissions",
-    privacySection9Content: "Vous serez toujours demandé un consentement explicite avant :\n\n• Collecter des données de santé ou sensibles (ex., photos d'aliments, genre)\n• Accéder aux permissions mobiles (ex., caméra, notifications)\n\nVous pouvez retirer le consentement à tout moment via les paramètres de l'app.\n\nExemple :\n\"Cette app analyse vos photos d'aliments en utilisant l'IA pour estimer les calories et nutriments. Les photos sont traitées temporairement et avec votre consentement.\"",
+    privacySection9Content: "Vous serez toujours demandé un consentement explicite avant :\n\n• Collecter des données de santé ou sensibles (ex., photos d'aliments, genre)\n• Accéder aux permissions mobiles (ex., caméra, notifications)\n\nVous pouvez retirer certains consentements (comme les notifications ou l'accès à la caméra) en ajustant les paramètres système de votre appareil.",
     
-    privacySection10Title: "10. Utilisation d'Ensembles de Données Publics",
-    privacySection10Content: "Cette app peut utiliser des ensembles de données publiquement disponibles (ex., Open Food Facts) sous des licences ouvertes telles que :\n\n• Licence de Base de Données Ouverte (ODbL)\n• Creative Commons Attribution ShareAlike (pour les images)\n\nCes données sont collaboratives et peuvent contenir des inexactitudes.",
+    privacySection10Title: "10. Données de Paiement",
+    privacySection10Content: "Si vous choisissez de faire des achats dans l'app, nous pouvons collecter les informations nécessaires pour traiter votre paiement (ex., numéro d'instrument de paiement, code de sécurité associé).\n\nToutes les données de paiement sont gérées et stockées par :\n\n• Apple App Store (Apple Inc.) – Politique de Confidentialité\n• Google Play Store (Google LLC) – Politique de Confidentialité\n• RevenueCat – Politique de Confidentialité\n• Stripe – Politique de Confidentialité\n\nNous ne stockons pas nous-mêmes les détails complets de paiement.",
     
     privacySection11Title: "11. Mises à Jour de Cette Politique",
-    privacySection11Content: "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter :\n\n• Changements dans les exigences légales\n• Nouvelles fonctionnalités de l'app\n• Pratiques de données en évolution\n\nNous vous notifierons des mises à jour importantes via l'app ou email. La dernière version sera toujours disponible à : 🔗 https://nutrimetrics.app/privacy",
+    privacySection11Content: "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter :\n\n• Changements dans les exigences légales\n• Nouvelles fonctionnalités de l'app\n• Pratiques de données en évolution\n\nLa dernière version sera toujours disponible à : https://nutrimetrics.app/privacy",
     
-    privacySection12Title: "12. Contact",
-    privacySection12Content: "📧 Email : support@nutrimetrics.app",
+    privacySection12Title: "13. Contact",
+    privacySection12Content: "Email : support@nutrimetrics.app\n\nPixel Ventures, 1 Rue Marguerin, 75014 Paris, France",
     
     // Terms of Use
     termsOfUseTitle: "Conditions d'Utilisation – Application Nutrimetrics",
