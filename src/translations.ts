@@ -77,6 +77,7 @@ export const translations = {
     navContact: "Contact Us",
     navPrivacy: "Privacy",
     navTerms: "Terms of Use",
+    navDeleteAccount: "Delete Account",
     
     // Features showcase section
     featuresTitle: "Why use Nutrimetrics? — What You'll Get in the Beta",
@@ -356,6 +357,7 @@ export const translations = {
     navContact: "Contáctanos",
     navPrivacy: "Privacidad",
     navTerms: "Términos de Uso",
+    navDeleteAccount: "Eliminar Cuenta",
     
     // Features showcase section
     featuresTitle: "¿Por qué usar Nutrimetrics? — Lo que obtendrás en la Beta",
@@ -635,6 +637,7 @@ export const translations = {
     navContact: "Nous Contacter",
     navPrivacy: "Confidentialité",
     navTerms: "Conditions d'Utilisation",
+    navDeleteAccount: "Supprimer le Compte",
     
     // Features showcase section
     featuresTitle: "Pourquoi utiliser Nutrimetrics ? — Ce que vous obtiendrez dans la Bêta",
