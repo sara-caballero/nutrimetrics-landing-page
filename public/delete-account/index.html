@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Nutrimetrics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4FD1C5 0%, #2D3748 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .language-selector {
+            padding: 20px 40px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .language-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid #4FD1C5;
+            background: white;
+            color: #4FD1C5;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: #4FD1C5;
+            color: white;
+        }
+        
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 209, 197, 0.3);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .warning-box h2 {
+            color: #856404;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #2D3748;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: #4FD1C5;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+        
+        .step-number {
+            background: #4FD1C5;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-text {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+        
+        .data-list {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .data-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .data-list li::before {
+            content: "•";
+            color: #4FD1C5;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #4FD1C5 0%, #2D3748 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .footer {
+            background: #2D3748;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #4FD1C5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .language-selector {
+                padding: 15px 20px;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Delete Account - Nutrimetrics</h1>
+            <p id="subtitle">Account deletion guide and information</p>
+        </div>
+        
+        <div class="language-selector">
+            <div class="language-buttons">
+                <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn" onclick="switchLanguage('fr')">Français</button>
+                <button class="lang-btn" onclick="switchLanguage('es')">Español</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="warning-box">
+                <h2 id="warning-title">⚠️ WARNING - IRREVERSIBLE ACTION</h2>
+                <p id="warning-text">Account deletion is permanent and irreversible. All your personal data will be permanently deleted from our servers and cannot be recovered.</p>
+            </div>
+            
+            <div class="section">
+                <h2>📱 <span id="how-to-title">HOW TO DELETE YOUR ACCOUNT</span></h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text" id="step1">Open the Nutrimetrics app on your mobile device</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text" id="step2">Tap on the "Settings" tab at the bottom of the screen</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text" id="step3">Scroll down to the "Security" section</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-text" id="step4">Tap on "Delete Account" (red button)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-text" id="step5">Read the warning and tap "Delete" to confirm</div>
+                    </div>
+                </div>
+                <p id="process-time">⏱️ The process takes a few seconds. You will be automatically logged out and redirected to the home screen once completed.</p>
+            </div>
+            
+            <div class="section">
+                <h2>📊 <span id="deleted-data-title">PERMANENTLY DELETED DATA</span></h2>
+                <p id="deleted-data-intro">Your account and all associated data will be completely deleted:</p>
+                <div class="data-list">
+                    <ul id="deleted-data-list">
+                        <li id="data1">User profile (name, email, date of birth, gender)</li>
+                        <li id="data2">Health data (weight, height, nutritional goals)</li>
+                        <li id="data3">Meal photos (all images stored in our cloud)</li>
+                        <li id="data4">Food journal (complete meal history)</li>
+                        <li id="data5">Physical activities (calories burned, exercises)</li>
+                        <li id="data6">Daily statistics (calories, macros, progress)</li>
+                        <li id="data7">Notification settings</li>
+                        <li id="data8">Push notification tokens</li>
+                        <li id="data9">Weight history</li>
+                        <li id="data10">Authentication data (Supabase account)</li>
+                        <li id="data11">All local application data</li>
+                    </ul>
+                </div>
+                <p id="ai-logs-note">🔒 AI usage logs are anonymized (user ID is removed but technical metrics are kept to improve the service).</p>
+            </div>
+            
+            <div class="section">
+                <h2>💾 <span id="retained-data-title">RETAINED DATA</span></h2>
+                <div class="data-list">
+                    <ul id="retained-data-list">
+                        <li id="retained1">Anonymized technical metrics (without user identifier) to improve the service</li>
+                        <li id="retained2">Deletion audit logs (for security and compliance reasons)</li>
+                    </ul>
+                </div>
+                <p id="no-personal-data">No personally identifiable data is retained after deletion.</p>
+            </div>
+            
+            <div class="contact-box">
+                <h2>📞 <span id="need-help-title">NEED HELP?</span></h2>
+                <p id="help-text">If you encounter difficulties deleting your account:</p>
+                <p><strong>Email:</strong> <a href="mailto:support@nutrimetrics.app">support@nutrimetrics.app</a></p>
+                <p><strong id="subject-label">Subject:</strong> <span id="subject-text">"Account deletion request"</span></p>
+                <p><strong id="response-label">Response:</strong> <span id="response-time">Within 24-48 hours</span></p>
+                <p id="manual-deletion">Our team can help you delete your account manually if necessary.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Nutrimetrics | <a href="https://nutrimetrics.app">Back to Home</a> | <a href="https://nutrimetrics.app/privacy">Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Delete Account - Nutrimetrics",
+                subtitle: "Account deletion guide and information",
+                warningTitle: "⚠️ WARNING - IRREVERSIBLE ACTION",
+                warningText: "Account deletion is permanent and irreversible. All your personal data will be permanently deleted from our servers and cannot be recovered.",
+                howToTitle: "HOW TO DELETE YOUR ACCOUNT",
+                step1: "Open the Nutrimetrics app on your mobile device",
+                step2: "Tap on the \"Settings\" tab at the bottom of the screen",
+                step3: "Scroll down to the \"Security\" section",
+                step4: "Tap on \"Delete Account\" (red button)",
+                step5: "Read the warning and tap \"Delete\" to confirm",
+                processTime: "⏱️ The process takes a few seconds. You will be automatically logged out and redirected to the home screen once completed.",
+                deletedDataTitle: "PERMANENTLY DELETED DATA",
+                deletedDataIntro: "Your account and all associated data will be completely deleted:",
+                data1: "User profile (name, email, date of birth, gender)",
+                data2: "Health data (weight, height, nutritional goals)",
+                data3: "Meal photos (all images stored in our cloud)",
+                data4: "Food journal (complete meal history)",
+                data5: "Physical activities (calories burned, exercises)",
+                data6: "Daily statistics (calories, macros, progress)",
+                data7: "Notification settings",
+                data8: "Push notification tokens",
+                data9: "Weight history",
+                data10: "Authentication data (Supabase account)",
+                data11: "All local application data",
+                aiLogsNote: "🔒 AI usage logs are anonymized (user ID is removed but technical metrics are kept to improve the service).",
+                retainedDataTitle: "RETAINED DATA",
+                retained1: "Anonymized technical metrics (without user identifier) to improve the service",
+                retained2: "Deletion audit logs (for security and compliance reasons)",
+                noPersonalData: "No personally identifiable data is retained after deletion.",
+                needHelpTitle: "NEED HELP?",
+                helpText: "If you encounter difficulties deleting your account:",
+                subjectLabel: "Subject:",
+                subjectText: "\"Account deletion request\"",
+                responseLabel: "Response:",
+                responseTime: "Within 24-48 hours",
+                manualDeletion: "Our team can help you delete your account manually if necessary."
+            },
+            fr: {
+                title: "Suppression de Compte - Nutrimetrics",
+                subtitle: "Guide de suppression de compte et informations",
+                warningTitle: "⚠️ ATTENTION - ACTION IRRÉVERSIBLE",
+                warningText: "La suppression de votre compte est définitive et irréversible. Toutes vos données personnelles seront définitivement supprimées de nos serveurs et ne pourront pas être récupérées.",
+                howToTitle: "COMMENT SUPPRIMER VOTRE COMPTE",
+                step1: "Ouvrez l'application Nutrimetrics sur votre appareil mobile",
+                step2: "Appuyez sur l'onglet \"Paramètres\" en bas de l'écran",
+                step3: "Faites défiler vers le bas jusqu'à la section \"Sécurité\"",
+                step4: "Appuyez sur \"Supprimer le compte\" (bouton rouge)",
+                step5: "Lisez l'avertissement et appuyez sur \"Supprimer\" pour confirmer",
+                processTime: "⏱️ Le processus prend quelques secondes. Vous serez automatiquement déconnecté et redirigé vers l'écran d'accueil une fois terminé.",
+                deletedDataTitle: "DONNÉES DÉFINITIVEMENT SUPPRIMÉES",
+                deletedDataIntro: "Votre compte et toutes les données associées seront complètement supprimées :",
+                data1: "Profil utilisateur (nom, email, date de naissance, genre)",
+                data2: "Données de santé (poids, taille, objectifs nutritionnels)",
+                data3: "Photos de repas (toutes les images stockées dans notre cloud)",
+                data4: "Journal alimentaire (historique complet des repas)",
+                data5: "Activités physiques (calories brûlées, exercices)",
+                data6: "Statistiques quotidiennes (calories, macros, progression)",
+                data7: "Paramètres de notifications",
+                data8: "Tokens de notifications push",
+                data9: "Historique de poids",
+                data10: "Données d'authentification (compte Supabase)",
+                data11: "Toutes les données locales de l'application",
+                aiLogsNote: "🔒 Les logs d'utilisation de l'IA sont anonymisés (l'ID utilisateur est supprimé mais les métriques techniques sont conservées pour améliorer le service).",
+                retainedDataTitle: "DONNÉES CONSERVÉES",
+                retained1: "Métriques techniques anonymisées (sans identifiant utilisateur) pour améliorer le service",
+                retained2: "Logs d'audit de suppression (pour des raisons de sécurité et conformité)",
+                noPersonalData: "Aucune donnée personnelle identifiable n'est conservée après la suppression.",
+                needHelpTitle: "BESOIN D'AIDE ?",
+                helpText: "Si vous rencontrez des difficultés pour supprimer votre compte :",
+                subjectLabel: "Sujet :",
+                subjectText: "\"Demande de suppression de compte\"",
+                responseLabel: "Réponse :",
+                responseTime: "Sous 24-48 heures",
+                manualDeletion: "Notre équipe peut vous aider à supprimer votre compte manuellement si nécessaire."
+            },
+            es: {
+                title: "Eliminar Cuenta - Nutrimetrics",
+                subtitle: "Guía de eliminación de cuenta e información",
+                warningTitle: "⚠️ ATENCIÓN - ACCIÓN IRREVERSIBLE",
+                warningText: "La eliminación de tu cuenta es permanente e irreversible. Todos tus datos personales serán eliminados permanentemente de nuestros servidores y no podrán ser recuperados.",
+                howToTitle: "CÓMO ELIMINAR TU CUENTA",
+                step1: "Abre la aplicación Nutrimetrics en tu dispositivo móvil",
+                step2: "Toca en la pestaña \"Configuración\" en la parte inferior de la pantalla",
+                step3: "Desplázate hacia abajo hasta la sección \"Seguridad\"",
+                step4: "Toca en \"Eliminar cuenta\" (botón rojo)",
+                step5: "Lee la advertencia y toca \"Eliminar\" para confirmar",
+                processTime: "⏱️ El proceso toma unos segundos. Serás desconectado automáticamente y redirigido a la pantalla de inicio una vez completado.",
+                deletedDataTitle: "DATOS ELIMINADOS PERMANENTEMENTE",
+                deletedDataIntro: "Tu cuenta y todos los datos asociados serán completamente eliminados:",
+                data1: "Perfil de usuario (nombre, email, fecha de nacimiento, género)",
+                data2: "Datos de salud (peso, altura, objetivos nutricionales)",
+                data3: "Fotos de comidas (todas las imágenes almacenadas en nuestra nube)",
+                data4: "Diario alimentario (historial completo de comidas)",
+                data5: "Actividades físicas (calorías quemadas, ejercicios)",
+                data6: "Estadísticas diarias (calorías, macros, progreso)",
+                data7: "Configuraciones de notificaciones",
+                data8: "Tokens de notificaciones push",
+                data9: "Historial de peso",
+                data10: "Datos de autenticación (cuenta Supabase)",
+                data11: "Todos los datos locales de la aplicación",
+                aiLogsNote: "🔒 Los logs de uso de IA están anonimizados (el ID de usuario se elimina pero las métricas técnicas se conservan para mejorar el servicio).",
+                retainedDataTitle: "DATOS CONSERVADOS",
+                retained1: "Métricas técnicas anonimizadas (sin identificador de usuario) para mejorar el servicio",
+                retained2: "Logs de auditoría de eliminación (por razones de seguridad y cumplimiento)",
+                noPersonalData: "No se conservan datos personales identificables después de la eliminación.",
+                needHelpTitle: "¿NECESITAS AYUDA?",
+                helpText: "Si encuentras dificultades para eliminar tu cuenta:",
+                subjectLabel: "Asunto:",
+                subjectText: "\"Solicitud de eliminación de cuenta\"",
+                responseLabel: "Respuesta:",
+                responseTime: "Dentro de 24-48 horas",
+                manualDeletion: "Nuestro equipo puede ayudarte a eliminar tu cuenta manualmente si es necesario."
+            }
+        };
+
+        function switchLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update content
+            const t = translations[lang];
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('warning-title').textContent = t.warningTitle;
+            document.getElementById('warning-text').textContent = t.warningText;
+            document.getElementById('how-to-title').textContent = t.howToTitle;
+            document.getElementById('step1').textContent = t.step1;
+            document.getElementById('step2').textContent = t.step2;
+            document.getElementById('step3').textContent = t.step3;
+            document.getElementById('step4').textContent = t.step4;
+            document.getElementById('step5').textContent = t.step5;
+            document.getElementById('process-time').textContent = t.processTime;
+            document.getElementById('deleted-data-title').textContent = t.deletedDataTitle;
+            document.getElementById('deleted-data-intro').textContent = t.deletedDataIntro;
+            document.getElementById('data1').textContent = t.data1;
+            document.getElementById('data2').textContent = t.data2;
+            document.getElementById('data3').textContent = t.data3;
+            document.getElementById('data4').textContent = t.data4;
+            document.getElementById('data5').textContent = t.data5;
+            document.getElementById('data6').textContent = t.data6;
+            document.getElementById('data7').textContent = t.data7;
+            document.getElementById('data8').textContent = t.data8;
+            document.getElementById('data9').textContent = t.data9;
+            document.getElementById('data10').textContent = t.data10;
+            document.getElementById('data11').textContent = t.data11;
+            document.getElementById('ai-logs-note').textContent = t.aiLogsNote;
+            document.getElementById('retained-data-title').textContent = t.retainedDataTitle;
+            document.getElementById('retained1').textContent = t.retained1;
+            document.getElementById('retained2').textContent = t.retained2;
+            document.getElementById('no-personal-data').textContent = t.noPersonalData;
+            document.getElementById('need-help-title').textContent = t.needHelpTitle;
+            document.getElementById('help-text').textContent = t.helpText;
+            document.getElementById('subject-label').textContent = t.subjectLabel;
+            document.getElementById('subject-text').textContent = t.subjectText;
+            document.getElementById('response-label').textContent = t.responseLabel;
+            document.getElementById('response-time').textContent = t.responseTime;
+            document.getElementById('manual-deletion').textContent = t.manualDeletion;
+        }
+    </script>
+</body>
+</html>
