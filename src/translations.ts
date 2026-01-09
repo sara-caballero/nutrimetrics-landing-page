@@ -5,10 +5,10 @@ export const translations = {
     metaDescription: "Join the Nutrimetrics beta program. Capture your plate, get instant nutritional analysis and personalized daily advice in seconds.",
     
     // Hero section
-    heroTrustBadge: "Loved by thousands with ⭐ 4.9 rating",
     heroTitle: "Meet Nutrimetrics",
-    heroSubtitle: "Track your calories with just a picture",
-    heroDescription: "Meet Nutrimetrics, the AI-powered app for easy calorie tracking. Snap a photo, scan a barcode, or describe your meal and get instant calorie and nutrient info.",
+    heroSubtitle: "Track your meals",
+    heroSubtitle2: "with a photo",
+    heroDescription: "Snap a picture of what you eat and instantly see calories and nutrients, all in one simple, visual experience.",
     
     // Benefits section
     benefitsTitle: "Everything you need to track your nutrition",
@@ -281,10 +281,10 @@ export const translations = {
     metaDescription: "Únete al programa beta de Nutrimetrics. Captura tu plato, obtén análisis nutricional instantáneo y consejos diarios personalizados en segundos.",
     
     // Hero section
-    heroTrustBadge: "Amado por miles con ⭐ 4.9 calificación",
     heroTitle: "Conoce Nutrimetrics",
-    heroSubtitle: "Rastrea tus calorías con solo una foto",
-    heroDescription: "Conoce Nutrimetrics, la app con IA para un seguimiento fácil de calorías. Toma una foto, escanea un código de barras o describe tu comida y obtén información instantánea de calorías y nutrientes.",
+    heroSubtitle: "Rastrea tus comidas",
+    heroSubtitle2: "con una foto",
+    heroDescription: "Toma una foto de lo que comes y ve instantáneamente las calorías y nutrientes, todo en una experiencia simple y visual.",
     
     // Benefits section
     benefitsTitle: "Todo lo que necesitas para seguir tu nutrición",
@@ -557,10 +557,11 @@ export const translations = {
     metaDescription: "Rejoignez notre programme bêta de Nutrimetrics. Capturez votre assiette, obtenez une analyse nutritionnelle instantanée et des conseils quotidiens personnalisés en quelques secondes.",
     
     // Hero section
-    heroTrustBadge: "Aimé par des milliers avec ⭐ 4.9 évaluation",
+    // Hero section
     heroTitle: "Découvrez Nutrimetrics",
-    heroSubtitle: "Suivez vos calories avec juste une photo",
-    heroDescription: "Découvrez Nutrimetrics, l'app alimentée par l'IA pour un suivi facile des calories. Prenez une photo, scannez un code-barres ou décrivez votre repas et obtenez des informations instantanées sur les calories et les nutriments.",
+    heroSubtitle: "Suivez vos repas",
+    heroSubtitle2: "avec une photo",
+    heroDescription: "Prenez une photo de ce que vous mangez et voyez instantanément les calories et les nutriments, le tout dans une expérience simple et visuelle.",
     
     // Benefits section
     benefitsTitle: "Tout ce dont vous avez besoin pour suivre votre nutrition",

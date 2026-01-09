@@ -245,22 +245,24 @@ function HomePage() {
       <section className="relative overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column: Trust Badge, H1, Subheadline, Store Buttons */}
+            {/* Left Column: H1, Subheadline, Store Buttons */}
             <div className="space-y-8">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-gray-700">
-                <Users className="w-4 h-4 mr-2 text-gray-600" />
-                {t.heroTrustBadge}
-              </div>
-              
-              {/* H1 */}
+              {/* H1 - Largest size */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                 {t.heroTitle}
-                <br />
-                <span className="text-gray-800">{t.heroSubtitle}</span>
               </h1>
               
-              {/* Subheadline */}
+              {/* Subtitle - Medium size */}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                {t.heroSubtitle}
+              </h2>
+              
+              {/* Subtitle 2 - Smaller size */}
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                {t.heroSubtitle2}
+              </h3>
+              
+              {/* Description - Regular size */}
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
                 {t.heroDescription}
               </p>
