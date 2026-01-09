@@ -311,11 +311,12 @@ function HomePage() {
             {/* Right Column: App Screenshots */}
             <div className="relative flex flex-col items-center lg:items-end">
               <div className="relative w-full max-w-lg mb-4">
-                <div className="rounded-[28px] bg-gradient-to-b from-slate-50 to-white border border-slate-200/70 shadow-[0_30px_90px_-45px_rgba(15,23,42,0.5)] p-4">
+                <div className="relative rounded-[28px] p-1">
+                  <div className="pointer-events-none absolute inset-4 blur-3xl rounded-full bg-[#4FD1C5]/15"></div>
                   <img 
                     src={heroSectionImage} 
                     alt="Nutrimetrics app showing photo to analysis flow" 
-                    className="w-full h-auto rounded-2xl object-contain"
+                    className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
                   />
                 </div>
               </div>
