@@ -310,7 +310,7 @@ function HomePage() {
             
             {/* Right Column: App Screenshots */}
             <div className="relative flex flex-col items-center lg:items-end">
-              <div className="relative w-full max-w-xl md:max-w-2xl mb-4">
+              <div className="relative w-full max-w-2xl md:max-w-3xl lg:max-w-4xl mb-4">
                 <div className="relative rounded-[28px] p-1">
                   <div className="pointer-events-none absolute inset-4 blur-3xl rounded-full bg-[#4FD1C5]/15"></div>
                   <img 
