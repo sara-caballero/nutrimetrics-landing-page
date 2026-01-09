@@ -5,14 +5,10 @@ export const translations = {
     metaDescription: "Join the Nutrimetrics beta program. Capture your plate, get instant nutritional analysis and personalized daily advice in seconds.",
     
     // Hero section
-    betaBadge: "Join our beta testing program",
-    heroTitle: "Track your meals. Smarter. Faster. Visually.",
-    heroSubtitle: "Nutrimetrics analyzes your food from a single photo",
-    heroSubtitleSuffix: "and gives you daily health advice tailored to your goals.",
-    heroDescription: "🎯 No more manual logging. Just snap, track, and thrive.",
-    ctaPrimary: "👉 Join the Free Beta – 14 Days of Full Access",
-    betaDuration: "Test the AI-powered nutrition assistant and get early access today.",
-    ctaReassurance: "No credit card. No spam. Just real feedback to help us build the best nutrition app for you.",
+    heroTrustBadge: "Loved by thousands with ⭐ 4.9 rating",
+    heroTitle: "Meet Nutrimetrics",
+    heroSubtitle: "Track your calories with just a picture",
+    heroDescription: "Meet Nutrimetrics, the AI-powered app for easy calorie tracking. Snap a photo, scan a barcode, or describe your meal and get instant calorie and nutrient info.",
     
     // Benefits section
     benefitsTitle: "Everything you need to track your nutrition",
@@ -285,14 +281,10 @@ export const translations = {
     metaDescription: "Únete al programa beta de Nutrimetrics. Captura tu plato, obtén análisis nutricional instantáneo y consejos diarios personalizados en segundos.",
     
     // Hero section
-    betaBadge: "Únete a nuestro programa de pruebas beta",
-    heroTitle: "Registra tus comidas. Más inteligente. Más rápido. Visualmente.",
-    heroSubtitle: "Nutrimetrics analiza tu comida desde una sola foto",
-    heroSubtitleSuffix: "y te da consejos diarios de salud adaptados a tus objetivos.",
-    heroDescription: "🎯 Se acabó el registro manual. Solo toma la foto, registra y progresa.",
-    ctaPrimary: "👉 Únete al Beta Gratis - 14 Días de Acceso Completo",
-    betaDuration: "Prueba el asistente nutricional con IA y obtén acceso anticipado hoy mismo.",
-    ctaReassurance: "Sin tarjeta de crédito. Sin spam. Solo comentarios reales para ayudarnos a crear la mejor app de nutrición para ti.",
+    heroTrustBadge: "Amado por miles con ⭐ 4.9 calificación",
+    heroTitle: "Conoce Nutrimetrics",
+    heroSubtitle: "Rastrea tus calorías con solo una foto",
+    heroDescription: "Conoce Nutrimetrics, la app con IA para un seguimiento fácil de calorías. Toma una foto, escanea un código de barras o describe tu comida y obtén información instantánea de calorías y nutrientes.",
     
     // Benefits section
     benefitsTitle: "Todo lo que necesitas para seguir tu nutrición",
@@ -565,14 +557,10 @@ export const translations = {
     metaDescription: "Rejoignez notre programme bêta de Nutrimetrics. Capturez votre assiette, obtenez une analyse nutritionnelle instantanée et des conseils quotidiens personnalisés en quelques secondes.",
     
     // Hero section
-    betaBadge: "Rejoignez notre programme de test bêta",
-    heroTitle: "Suivez vos repas. Plus intelligent. Plus rapide. Visuellement.",
-    heroSubtitle: "Nutrimetrics analyse vos plats à partir d'une seule photo",
-    heroSubtitleSuffix: "et vous donne des conseils de santé quotidiens adaptés à vos objectifs.",
-    heroDescription: "🎯 Fini la saisie manuelle. Capturez, suivez et prospérez.",
-    ctaPrimary: "👉 Rejoignez le Bêta Gratuit – 14 Jours d'Accès Complet",
-    betaDuration: "Testez l'assistant nutritionnel IA et obtenez un accès anticipé aujourd'hui.",
-    ctaReassurance: "Pas de carte bancaire. Pas de spam. Juste votre retour pour nous aider à créer la meilleure app nutrition pour vous.",
+    heroTrustBadge: "Aimé par des milliers avec ⭐ 4.9 évaluation",
+    heroTitle: "Découvrez Nutrimetrics",
+    heroSubtitle: "Suivez vos calories avec juste une photo",
+    heroDescription: "Découvrez Nutrimetrics, l'app alimentée par l'IA pour un suivi facile des calories. Prenez une photo, scannez un code-barres ou décrivez votre repas et obtenez des informations instantanées sur les calories et les nutriments.",
     
     // Benefits section
     benefitsTitle: "Tout ce dont vous avez besoin pour suivre votre nutrition",
