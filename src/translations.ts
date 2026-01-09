@@ -64,7 +64,7 @@ export const translations = {
     
     // Footer
     footerCopyright: "© 2025 Nutrimetrics",
-    footerBeta: "Beta Version",
+    footerCopyrightFull: "© Copyright 2026, All rights reserved",
     footerContact: "Contact: support@nutrimetrics.app",
     
     // Navigation
@@ -340,7 +340,7 @@ export const translations = {
     
     // Footer
     footerCopyright: "© 2025 Nutrimetrics",
-    footerBeta: "Versión Beta",
+    footerCopyrightFull: "© Copyright 2026, Todos los derechos reservados",
     footerContact: "Contacto: support@nutrimetrics.app",
     
     // Navigation
@@ -617,7 +617,7 @@ export const translations = {
     
     // Footer
     footerCopyright: "© 2025 Nutrimetrics",
-    footerBeta: "Version Bêta",
+    footerCopyrightFull: "© Copyright 2026, Tous droits réservés",
     footerContact: "Contact : support@nutrimetrics.app",
     
     // Navigation
