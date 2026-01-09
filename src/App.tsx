@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { Camera, BookOpen, Target, Users, Clock, Globe, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown, Instagram, Facebook } from 'lucide-react';
+import { Camera, BookOpen, Target, Globe, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown, Instagram, Facebook } from 'lucide-react';
 import { translations, Language } from './translations';
 import PrivacyPage from './PrivacyPage';
 import ComingSoonPage from './ComingSoonPage';
@@ -582,20 +582,52 @@ function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.testimonialsTitle}
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              {t.testimonialsSubtitle}
-            </p>
-            
-            <div className="bg-gradient-to-br from-[#4FD1C5]/5 to-white p-12 rounded-2xl border border-[#4FD1C5]/20">
-              <div className="flex items-center justify-center mb-6">
-                <Users className="w-12 h-12 text-[#4FD1C5]" />
-              </div>
-              <p className="text-lg text-gray-700 mb-6">
-                {t.testimonial1}
+            {t.testimonialsSubtitle ? (
+              <p className="text-xl text-gray-600 mb-8">
+                {t.testimonialsSubtitle}
               </p>
-              <div className="inline-flex items-center px-4 py-2 bg-[#4FD1C5]/10 text-[#4FD1C5] rounded-full text-sm font-medium">
-                <Clock className="w-4 h-4 mr-2" />
-                {t.betaTester}
+            ) : (
+              <div className="mb-10"></div>
+            )}
+
+            <div className="grid gap-6 md:grid-cols-3 text-left">
+              {/* Testimonial 1 */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <p className="text-gray-800 leading-relaxed mb-5">
+                  {t.testimonial1}
+                </p>
+                <div className="text-sm text-gray-700 font-medium mb-3">
+                  {t.testimonial1Author}
+                </div>
+                <div className="inline-flex items-center px-3 py-1 bg-[#4FD1C5]/10 text-[#4FD1C5] rounded-full text-xs font-semibold">
+                  {t.testimonialsLabel}
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <p className="text-gray-800 leading-relaxed mb-5">
+                  {t.testimonial2}
+                </p>
+                <div className="text-sm text-gray-700 font-medium mb-3">
+                  {t.testimonial2Author}
+                </div>
+                <div className="inline-flex items-center px-3 py-1 bg-[#4FD1C5]/10 text-[#4FD1C5] rounded-full text-xs font-semibold">
+                  {t.testimonialsLabel}
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <p className="text-gray-800 leading-relaxed mb-5">
+                  {t.testimonial3}
+                </p>
+                <div className="text-sm text-gray-700 font-medium mb-3">
+                  {t.testimonial3Author}
+                </div>
+                <div className="inline-flex items-center px-3 py-1 bg-[#4FD1C5]/10 text-[#4FD1C5] rounded-full text-xs font-semibold">
+                  {t.testimonialsLabel}
+                </div>
               </div>
             </div>
           </div>

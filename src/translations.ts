@@ -24,14 +24,19 @@ export const translations = {
     benefit3Description: "Get daily personalized advice based on your goals - whether you want to lose weight, maintain, or gain muscle mass. Tailored just for you.",
     
     // Testimonials
-    testimonialsTitle: "Coming Soon: Beta User Reviews",
-    testimonialsSubtitle: "Real feedback from people testing Nutrimetrics",
+    testimonialsTitle: "What early Android users are saying",
+    testimonialsSubtitle: "",
     
-    testimonial1: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
-    testimonial2: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
-    testimonial3: "We're currently collecting feedback from our beta testers. Their reviews and experiences will be shared here soon!",
+    testimonial1: "“I used to guess my calories all the time. Taking a photo and seeing everything broken down makes tracking feel effortless.”",
+    testimonial1Author: "— Laura, weight loss goal",
     
-    betaTester: "Beta Tester",
+    testimonial2: "“I don’t like logging food manually. This fits better into my routine and helps me stay consistent without thinking about it.”",
+    testimonial2Author: "— Marcos, maintenance goal",
+    
+    testimonial3: "“Seeing my meals visually helps me understand my habits better. It’s simple, clean, and actually motivating to use.”",
+    testimonial3Author: "— Sofia, healthy lifestyle",
+    
+    testimonialsLabel: "Early Android user",
     
     // Form section
     formTitle: "Ready to transform your eating habits?",
@@ -300,14 +305,19 @@ export const translations = {
     benefit3Description: "Recibe consejos diarios personalizados basados en tus objetivos - ya sea que quieras perder peso, mantenerlo o ganar masa muscular. Adaptado solo para ti.",
     
     // Testimonials
-    testimonialsTitle: "Próximamente: opiniones de nuestros usuarios beta",
-    testimonialsSubtitle: "Comentarios reales de personas probando Nutrimetrics",
+    testimonialsTitle: "Lo que dicen los primeros usuarios de Android",
+    testimonialsSubtitle: "",
     
-    testimonial1: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
-    testimonial2: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
-    testimonial3: "Actualmente estamos recopilando comentarios de nuestros usuarios beta. ¡Sus opiniones y experiencias se compartirán aquí pronto!",
+    testimonial1: "“Antes siempre adivinaba mis calorías. Hacer una foto y ver todo desglosado hace que el seguimiento sea effortless.”",
+    testimonial1Author: "— Laura, objetivo: perder peso",
     
-    betaTester: "Probador Beta",
+    testimonial2: "“No me gusta registrar comida manualmente. Esto encaja mejor en mi rutina y me ayuda a ser constante sin pensarlo.”",
+    testimonial2Author: "— Marcos, objetivo: mantenimiento",
+    
+    testimonial3: "“Ver mis comidas de forma visual me ayuda a entender mejor mis hábitos. Es simple, limpio y realmente motiva usarlo.”",
+    testimonial3Author: "— Sofia, estilo de vida saludable",
+    
+    testimonialsLabel: "Usuario temprano de Android",
     
     // Form section
     formTitle: "¿Listo para transformar tus hábitos alimentarios?",
@@ -577,14 +587,19 @@ export const translations = {
     benefit3Description: "Recevez des conseils quotidiens personnalisés basés sur vos objectifs - que vous souhaitiez perdre du poids, maintenir ou prendre de la masse musculaire. Adapté juste pour vous.",
     
     // Testimonials
-    testimonialsTitle: "Bientôt disponible : avis de nos utilisateurs bêta",
-    testimonialsSubtitle: "Vrais commentaires de personnes testant Nutrimetrics",
+    testimonialsTitle: "Ce que disent les premiers utilisateurs Android",
+    testimonialsSubtitle: "",
     
-    testimonial1: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
-    testimonial2: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
-    testimonial3: "Nous recueillons actuellement les commentaires de nos testeurs bêta. Leurs avis et expériences seront partagés ici bientôt !",
+    testimonial1: "“Avant, je devinais toujours mes calories. Prendre une photo et voir tout détaillé rend le suivi vraiment sans effort.”",
+    testimonial1Author: "— Laura, objectif perte de poids",
     
-    betaTester: "Testeur Bêta",
+    testimonial2: "“Je n’aime pas saisir mes repas manuellement. Ça s’intègre mieux à ma routine et m’aide à rester constant sans y penser.”",
+    testimonial2Author: "— Marcos, objectif maintien",
+    
+    testimonial3: "“Voir mes repas visuellement m’aide à mieux comprendre mes habitudes. C’est simple, propre, et vraiment motivant.”",
+    testimonial3Author: "— Sofia, mode de vie sain",
+    
+    testimonialsLabel: "Premier utilisateur Android",
     
     // Form section
     formTitle: "Prêt à transformer vos habitudes alimentaires ?",
