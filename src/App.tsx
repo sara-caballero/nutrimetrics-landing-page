@@ -241,6 +241,7 @@ function HomePage() {
         </div>
       </div>
 
+      <main>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -317,6 +318,9 @@ function HomePage() {
                     src={heroSectionImage} 
                     alt="Nutrimetrics app showing photo to analysis flow" 
                     className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -493,6 +497,8 @@ function HomePage() {
                             src={analyseImage} 
                             alt="AI-Powered Meal Analysis" 
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         )}
                         {activeFeature === 2 && (
@@ -500,6 +506,8 @@ function HomePage() {
                             src={homeImage} 
                             alt="Personalized Daily Overview" 
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         )}
                         {activeFeature === 3 && (
@@ -507,6 +515,8 @@ function HomePage() {
                             src={journalImage} 
                             alt="Visual Food Journal" 
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         )}
                         {activeFeature === 4 && (
@@ -514,6 +524,8 @@ function HomePage() {
                             src={statsImage} 
                             alt="Basic Stats & Trends" 
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                         )}
                       </div>
@@ -1023,6 +1035,7 @@ function HomePage() {
           </div>
         </div>
       </footer>
+      </main>
     </div>
   );
 }
@@ -1030,8 +1043,7 @@ function HomePage() {
 // Componentes wrapper para manejar la navegación
 function PrivacyPageWrapper() {
   const navigate = useNavigate();
-  const [language, setLanguage] = useState<Language>('en');
-  return <PrivacyPage language={language} onBack={() => {
+  return <PrivacyPage language="en" onBack={() => {
     navigate('/');
     // Scroll to footer after navigation
     setTimeout(() => {
@@ -1045,8 +1057,7 @@ function PrivacyPageWrapper() {
 
 function TermsPageWrapper() {
   const navigate = useNavigate();
-  const [language, setLanguage] = useState<Language>('en');
-  return <TermsPage language={language} onBack={() => {
+  return <TermsPage language="en" onBack={() => {
     navigate('/');
     // Scroll to footer after navigation
     setTimeout(() => {

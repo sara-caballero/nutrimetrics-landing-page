@@ -4,17 +4,63 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/splash-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="page-title">Nutrimetrics - Your food, in one click</title>
-    <meta id="page-description" name="description" content="Join the Nutrimetrics beta program. Capture your plate, get instant nutritional analysis and personalized daily advice in seconds." />
-    <meta id="og-title" property="og:title" content="Nutrimetrics - Smart Nutrition Tracking" />
-    <meta id="og-description" property="og:description" content="AI-powered nutrition analysis from photos. Join our beta testing program." />
+    <!-- Primary SEO -->
+    <title>Nutrimetrics — AI calorie & nutrition tracker (Android)</title>
+    <meta name="description" content="Track your meals with a photo. Nutrimetrics instantly estimates calories and nutrients in a simple, visual experience. Available now on Android." />
+    <link rel="canonical" href="https://nutrimetrics.app/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#4FD1C5" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nutrimetrics — Track meals with a photo" />
+    <meta property="og:description" content="Snap a picture of what you eat and instantly see calories and nutrients in a simple, visual experience. Available now on Android." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/splash-icon.png" />
-    <meta property="og:url" content="https://nutrimetrics.app" />
+    <meta property="og:url" content="https://nutrimetrics.app/" />
+    <meta property="og:image" content="https://nutrimetrics.app/og.png" />
+    <meta property="og:image:alt" content="Nutrimetrics app screenshots showing photo-to-analysis flow" />
+
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nutrimetrics - Smart Nutrition Tracking" />
-    <meta name="twitter:description" content="AI-powered nutrition analysis from photos. Join our beta testing program." />
-    <meta name="twitter:image" content="/splash-icon.png" />
+    <meta name="twitter:title" content="Nutrimetrics — Track meals with a photo" />
+    <meta name="twitter:description" content="Snap a picture of what you eat and instantly see calories and nutrients. Available now on Android." />
+    <meta name="twitter:image" content="https://nutrimetrics.app/og.png" />
+
+    <!-- Preconnect (performance) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://nutrimetrics.app/#organization",
+            "name": "Nutrimetrics",
+            "url": "https://nutrimetrics.app/",
+            "logo": "https://nutrimetrics.app/splash-icon.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nutrimetrics.app/#website",
+            "url": "https://nutrimetrics.app/",
+            "name": "Nutrimetrics",
+            "publisher": { "@id": "https://nutrimetrics.app/#organization" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://nutrimetrics.app/#app",
+            "name": "Nutrimetrics",
+            "operatingSystem": "Android",
+            "applicationCategory": "HealthApplication",
+            "url": "https://nutrimetrics.app/",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.nutrimetrics.app&pcampaignid=web_share",
+            "publisher": { "@id": "https://nutrimetrics.app/#organization" }
+          }
+        ]
+      }
+    </script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J6Z2MZHJ"></script>
