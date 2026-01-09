@@ -244,7 +244,7 @@ function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 items-center">
             {/* Left Column: H1, Subheadline, Store Buttons */}
             <div className="space-y-8">
               {/* H1 - Largest size */}
