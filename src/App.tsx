@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Camera, BookOpen, Target, Globe, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown, Instagram, Facebook } from 'lucide-react';
 import { translations, Language } from './translations';
-import PrivacyPage from './PrivacyPage';
-import ComingSoonPage from './ComingSoonPage';
-import TermsPage from './TermsPage';
-import ResetPasswordPage from './ResetPasswordPage';
 import logoImage from '/splash-icon.png';
 import nutrimetricsLogo from '/Nutrimetrics.png';
 import homeImage from '/home.png';
 import statsImage from '/stats.png';
 import analyseImage from '/analyse.png';
 import journalImage from '/journal.png';
-import heroSectionImage from '/hero_section.png';
+// Hero LCP image is served from /public with responsive srcset (see <picture> below)
+
+const PrivacyPage = lazy(() => import('./PrivacyPage'));
+const ComingSoonPage = lazy(() => import('./ComingSoonPage'));
+const TermsPage = lazy(() => import('./TermsPage'));
+const ResetPasswordPage = lazy(() => import('./ResetPasswordPage'));
 
 // Componente principal de la página de inicio
 function HomePage() {
@@ -116,8 +117,8 @@ function HomePage() {
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
                   <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold">App Store</div>
+                    <div className="text-xs">{t.iosBadgeTop}</div>
+                    <div className="text-sm font-semibold">{t.iosBadgeBottom}</div>
                   </div>
                 </a>
                 
@@ -192,8 +193,8 @@ function HomePage() {
                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                       </svg>
                       <div className="text-left">
-                        <div className="text-xs">Download on the</div>
-                        <div className="text-sm font-semibold">App Store</div>
+                        <div className="text-xs">{t.iosBadgeTop}</div>
+                        <div className="text-sm font-semibold">{t.iosBadgeBottom}</div>
                       </div>
                     </a>
                     
@@ -283,8 +284,8 @@ function HomePage() {
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
                   <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold">App Store</div>
+                    <div className="text-xs">{t.iosBadgeTop}</div>
+                    <div className="text-sm font-semibold">{t.iosBadgeBottom}</div>
                   </div>
                 </a>
                 
@@ -314,14 +315,28 @@ function HomePage() {
               <div className="relative w-full max-w-2xl md:max-w-3xl lg:max-w-4xl mb-4">
                 <div className="relative rounded-[28px] p-1">
                   <div className="pointer-events-none absolute inset-4 blur-3xl rounded-full bg-[#4FD1C5]/15"></div>
-                  <img 
-                    src={heroSectionImage} 
-                    alt="Nutrimetrics app showing photo to analysis flow" 
-                    className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcSet="/hero_section-480.avif 480w, /hero_section-768.avif 768w, /hero_section-1024.avif 1024w, /hero_section-1440.avif 1440w"
+                      sizes="(max-width: 1024px) 92vw, 55vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcSet="/hero_section-480.webp 480w, /hero_section-768.webp 768w, /hero_section-1024.webp 1024w, /hero_section-1440.webp 1440w"
+                      sizes="(max-width: 1024px) 92vw, 55vw"
+                    />
+                    <img
+                      src="/hero_section-1024.avif"
+                      alt="Nutrimetrics app showing photo to analysis flow"
+                      className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
+                      width={2400}
+                      height={1600}
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
@@ -661,7 +676,7 @@ function HomePage() {
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
             {!isSubmitted ? (
               <form action="https://formsubmit.co/support@nutrimetrics.app" method="POST" onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="_subject" value="Nueva solicitud de acceso anticipado - Nutrimetrics" />
+                <input type="hidden" name="_subject" value="iOS waitlist - Nutrimetrics" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" value={window.location.href} />
                 <input type="hidden" name="language" value={language} />
@@ -981,8 +996,8 @@ function HomePage() {
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
                   <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-sm font-semibold">App Store</div>
+                    <div className="text-xs">{t.iosBadgeTop}</div>
+                    <div className="text-sm font-semibold">{t.iosBadgeBottom}</div>
                   </div>
                 </a>
                 
@@ -1043,39 +1058,55 @@ function HomePage() {
 // Componentes wrapper para manejar la navegación
 function PrivacyPageWrapper() {
   const navigate = useNavigate();
-  return <PrivacyPage language="en" onBack={() => {
-    navigate('/');
-    // Scroll to footer after navigation
-    setTimeout(() => {
-      const footer = document.querySelector('footer');
-      if (footer) {
-        footer.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  }} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <PrivacyPage language="en" onBack={() => {
+        navigate('/');
+        // Scroll to footer after navigation
+        setTimeout(() => {
+          const footer = document.querySelector('footer');
+          if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }} />
+    </Suspense>
+  );
 }
 
 function TermsPageWrapper() {
   const navigate = useNavigate();
-  return <TermsPage language="en" onBack={() => {
-    navigate('/');
-    // Scroll to footer after navigation
-    setTimeout(() => {
-      const footer = document.querySelector('footer');
-      if (footer) {
-        footer.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  }} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <TermsPage language="en" onBack={() => {
+        navigate('/');
+        // Scroll to footer after navigation
+        setTimeout(() => {
+          const footer = document.querySelector('footer');
+          if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }} />
+    </Suspense>
+  );
 }
 
 function ComingSoonPageWrapper() {
   const navigate = useNavigate();
-  return <ComingSoonPage language="en" onBack={() => navigate('/')} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ComingSoonPage language="en" onBack={() => navigate('/')} />
+    </Suspense>
+  );
 }
 
 function ResetPasswordPageWrapper() {
-  return <ResetPasswordPage />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ResetPasswordPage />
+    </Suspense>
+  );
 }
 
 // Componente principal App con enrutamiento
@@ -1088,7 +1119,6 @@ function App() {
         <Route path="/terms" element={<TermsPageWrapper />} />
         <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
         <Route path="/reset-password.html" element={<ResetPasswordPageWrapper />} />
-        <Route path="/" element={<HomePage />} />
       </Routes>
     </Router>
   );

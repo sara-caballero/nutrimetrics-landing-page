@@ -3,8 +3,46 @@ import { useNavigate } from 'react-router-dom';
 
 declare global {
   interface Window {
+    supabase?: any;
     supabaseClient: any;
   }
+}
+
+const SUPABASE_URL = 'https://ssedsxqfinqnkwuejlxx.supabase.co';
+const SUPABASE_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNzZWRzeHFmaW5xbmt3dWVqbHh4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI4Mjk1OTgsImV4cCI6MjA2ODQwNTU5OH0._RYdxDXBUkg_xwhiwdPxzKDhes8_A1WlSlTN_AmipZM';
+
+function loadSupabaseJs(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (window.supabase?.createClient) {
+      resolve();
+      return;
+    }
+    const existing = document.querySelector<HTMLScriptElement>('script[data-supabase-js="true"]');
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener('error', () => reject(new Error('Failed to load Supabase JS')), { once: true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/@supabase/supabase-js@2';
+    script.async = true;
+    script.defer = true;
+    script.dataset.supabaseJs = 'true';
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load Supabase JS'));
+    document.head.appendChild(script);
+  });
+}
+
+async function ensureSupabaseClient() {
+  if (window.supabaseClient) return;
+  await loadSupabaseJs();
+  if (!window.supabase?.createClient) {
+    throw new Error('Supabase library not available');
+  }
+  window.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
 
 function getParams() {
@@ -52,6 +90,7 @@ const ResetPasswordPage: React.FC = () => {
       }
 
       try {
+        await ensureSupabaseClient();
         const supabase = window.supabaseClient;
         if (!supabase) {
           throw new Error('Supabase client not available');
