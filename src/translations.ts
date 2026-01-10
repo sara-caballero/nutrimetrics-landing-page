@@ -289,9 +289,9 @@ export const translations = {
     
     // Hero section
     heroTitle: "Conoce Nutrimetrics",
-    heroSubtitle: "Rastrea tus comidas",
-    heroSubtitle2: "con una foto",
-    heroDescription: "Toma una foto de lo que comes y ve instantáneamente las calorías y nutrientes, todo en una experiencia simple y visual.",
+    heroSubtitle: "Controla tus comidas",
+    heroSubtitle2: "con una sola foto",
+    heroDescription: "Toma una foto de lo que comes y ve al instante las calorías y los nutrientes, todo en una experiencia simple y visual.",
     iosBadgeTop: "iOS",
     iosBadgeBottom: "Próximamente",
     
@@ -312,24 +312,24 @@ export const translations = {
     testimonialsTitle: "Lo que dicen los primeros usuarios de Android",
     testimonialsSubtitle: "",
     
-    testimonial1: "“Antes siempre adivinaba mis calorías. Hacer una foto y ver todo desglosado hace que el seguimiento sea effortless.”",
+    testimonial1: "“Antes siempre acababa adivinando mis calorías. Hacer una foto y ver todo desglosado hace que llevar el control sea muy fácil.”",
     testimonial1Author: "— Laura, objetivo: perder peso",
     
     testimonial2: "“No me gusta registrar comida manualmente. Esto encaja mejor en mi rutina y me ayuda a ser constante sin pensarlo.”",
     testimonial2Author: "— Marcos, objetivo: mantenimiento",
     
     testimonial3: "“Ver mis comidas de forma visual me ayuda a entender mejor mis hábitos. Es simple, limpio y realmente motiva usarlo.”",
-    testimonial3Author: "— Sofia, estilo de vida saludable",
+    testimonial3Author: "— Sofía, estilo de vida saludable",
     
-    testimonialsLabel: "Usuario temprano de Android",
+    testimonialsLabel: "Usuario de Android",
     
     // Form section
     formTitle: "¿Listo para transformar tus hábitos alimentarios?",
-    formSubtitle: "Android ya está disponible. Únete a la lista de espera de iOS para recibir un aviso cuando salga.",
+    formSubtitle: "Android ya está disponible. Únete a la lista de espera de iOS para recibir un aviso cuando esté disponible.",
     
     nameLabel: "Nombre",
     namePlaceholder: "Ingresa tu nombre",
-    emailLabel: "Correo Electrónico",
+    emailLabel: "Correo electrónico",
     emailPlaceholder: "Ingresa tu correo",
     goalLabel: "¿Cuál es tu objetivo principal?",
     goalPlaceholder: "Selecciona tu objetivo",
@@ -354,7 +354,7 @@ export const translations = {
     
     // Footer
     footerCopyright: "© 2025 Nutrimetrics",
-    footerCopyrightFull: "© Copyright 2026, Todos los derechos reservados",
+    footerCopyrightFull: "© 2026. Todos los derechos reservados.",
     footerContact: "Contacto: support@nutrimetrics.app",
     
     // Navigation
@@ -362,8 +362,8 @@ export const translations = {
     navTestimonials: "Testimonios",
     navContact: "Contáctanos",
     navPrivacy: "Privacidad",
-    navTerms: "Términos de Uso",
-    navDeleteAccount: "Eliminar Cuenta",
+    navTerms: "Términos de uso",
+    navDeleteAccount: "Eliminar cuenta",
     
     // Features showcase section
     featuresTitle: "¿Por qué usar Nutrimetrics?",
@@ -377,21 +377,21 @@ export const translations = {
     feature3Title: "Diario Visual de Alimentos",
     feature3Description: "Rastrea fácilmente tus comidas con un diario de alimentos intuitivo. Revisa tu día en una vista limpia y desplazable que tiene sentido de un vistazo.",
     
-    feature4Title: "Estadísticas y Tendencias Básicas",
-    feature4Description: "Sigue tu nutrición a lo largo del tiempo con estadísticas visuales simples. Perfecto para comenzar con un seguimiento saludable – más análisis están llegando pronto.",
+    feature4Title: "Estadísticas y tendencias",
+    feature4Description: "Sigue tu nutrición a lo largo del tiempo con estadísticas visuales simples. Perfecto para empezar a cuidar tu alimentación. Más análisis llegarán pronto.",
     
     // Why Choose Nutrimetrics section
     whyChooseTitle: "¿Por qué elegir Nutrimetrics?",
-    whyChooseSubtitle: "La forma más inteligente de rastrear tus comidas — con solo una foto.",
+    whyChooseSubtitle: "La forma más inteligente de controlar tus comidas, con solo una foto.",
     
     whyChoose1Title: "Olvídate de adivinar",
-    whyChoose1Description: "No más registro manual de calorías o escaneo de códigos de barras. Solo toma una foto y Nutrimetrics analiza instantáneamente tu comida: calorías, macros y tamaño de porción — todo adaptado a tu perfil.",
+    whyChoose1Description: "No más registro manual de calorías ni escaneo de códigos de barras. Solo toma una foto y Nutrimetrics analiza tu comida al instante: calorías, macros y tamaño de las porciones, todo adaptado a tu perfil.",
     
     whyChoose2Title: "Se adapta a tu estilo de vida",
     whyChoose2Description: "Nutrimetrics adapta tus objetivos nutricionales diarios basándose en tus metas — ya sea que busques perder peso, ganar músculo o mantener el equilibrio. Los resúmenes visuales hacen que el seguimiento sea sin esfuerzo, incluso en días ocupados.",
     
-    whyChoose3Title: "Diseñado para ayudarte a mantenerte en el camino",
-    whyChoose3Description: "Tu progreso, visualizado. Desde tu panel diario personalizado hasta tu diario de comidas intuitivo, todo está diseñado para mantenerte comprometido — y motivado a comer mejor, una comida a la vez.",
+    whyChoose3Title: "Diseñado para ayudarte a mantenerte constante",
+    whyChoose3Description: "Tu progreso, visualizado. Desde tu panel diario personalizado hasta tu diario de comidas intuitivo, todo está pensado para ayudarte a comer mejor, una comida a la vez.",
     
     // Privacy page
     backToHome: "Volver al Inicio",
@@ -420,8 +420,8 @@ export const translations = {
     faq4Question: "¿Mis datos personales están seguros?",
     faq4Answer: "Sí — 100%. Priorizamos tu privacidad y seguridad de datos por encima de todo. Tus datos nunca se comparten con empresas externas, anunciantes o cualquier organización externa. Puedes eliminar tu cuenta y todos los datos en cualquier momento.",
     
-    faq5Question: "¿Qué idiomas soporta la app?",
-    faq5Answer: "Actualmente: Inglés, Francés y Español. La interfaz completa, análisis de comidas y sugerencias están disponibles en todos los idiomas soportados. Más idiomas están llegando pronto.",
+    faq5Question: "¿En qué idiomas está disponible la app?",
+    faq5Answer: "Actualmente: inglés, francés y español. La interfaz completa, el análisis de comidas y las sugerencias están disponibles en todos los idiomas compatibles. Más idiomas llegarán pronto.",
     
     faq6Question: "¿Puedo cambiar de dispositivo y mantener mis datos?",
     faq6Answer: "Sí. Tu perfil, comidas y progreso se almacenan en la nube. Solo inicia sesión en tu nuevo teléfono — todo se sincroniza automáticamente.",
