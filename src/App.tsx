@@ -8,7 +8,7 @@ import homeImage from '/home.png';
 import statsImage from '/stats.png';
 import analyseImage from '/analyse.png';
 import journalImage from '/journal.png';
-// Hero LCP image is served from /public with responsive srcset (see <picture> below)
+// Hero LCP image is served from /public
 
 const PrivacyPage = lazy(() => import('./PrivacyPage'));
 const ComingSoonPage = lazy(() => import('./ComingSoonPage'));
@@ -315,28 +315,16 @@ function HomePage() {
               <div className="relative w-full max-w-2xl md:max-w-3xl lg:max-w-4xl mb-4">
                 <div className="relative rounded-[28px] p-1">
                   <div className="pointer-events-none absolute inset-4 blur-3xl rounded-full bg-[#4FD1C5]/15"></div>
-                  <picture>
-                    <source
-                      type="image/avif"
-                      srcSet="/hero_section-480.avif 480w, /hero_section-768.avif 768w, /hero_section-1024.avif 1024w, /hero_section-1440.avif 1440w"
-                      sizes="(max-width: 1024px) 92vw, 55vw"
-                    />
-                    <source
-                      type="image/webp"
-                      srcSet="/hero_section-480.webp 480w, /hero_section-768.webp 768w, /hero_section-1024.webp 1024w, /hero_section-1440.webp 1440w"
-                      sizes="(max-width: 1024px) 92vw, 55vw"
-                    />
-                    <img
-                      src="/hero_section-1024.avif"
-                      alt="Nutrimetrics app showing photo to analysis flow"
-                      className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                      width={2400}
-                      height={1600}
-                    />
-                  </picture>
+                  <img
+                    src="/hero_section.png"
+                    alt="Nutrimetrics app screenshots showing photo-to-analysis flow"
+                    className="relative w-full h-auto rounded-2xl object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.35)]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={2400}
+                    height={1600}
+                  />
                 </div>
               </div>
             </div>
