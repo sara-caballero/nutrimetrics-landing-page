@@ -11,6 +11,17 @@
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#4FD1C5" />
 
+    <!-- LCP image preload -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero_section-768.avif"
+      fetchpriority="high"
+      type="image/avif"
+      imagesrcset="/hero_section-480.avif 480w, /hero_section-768.avif 768w, /hero_section-1024.avif 1024w, /hero_section-1440.avif 1440w"
+      imagesizes="(max-width: 1024px) 92vw, 55vw"
+    />
+
     <!-- Open Graph -->
     <meta property="og:title" content="Nutrimetrics — Track meals with a photo" />
     <meta property="og:description" content="Snap a picture of what you eat and instantly see calories and nutrients in a simple, visual experience. Available now on Android." />
@@ -27,7 +38,6 @@
 
     <!-- Preconnect (performance) -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://unpkg.com" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -72,15 +82,8 @@
       gtag('config', 'G-E9J6Z2MZHJ');
     </script>
     
-    <!-- Supabase JS desde CDN -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script>
-      window.supabaseClient = supabase.createClient(
-        'https://ssedsxqfinqnkwuejlxx.supabase.co',
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNzZWRzeHFmaW5xbmt3dWVqbHh4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI4Mjk1OTgsImV4cCI6MjA2ODQwNTU5OH0._RYdxDXBUkg_xwhiwdPxzKDhes8_A1WlSlTN_AmipZM'
-      );
-    </script>
-    <script type="module" crossorigin src="/assets/index-RGEwfM6H.js"></script>
+    <!-- NOTE: Supabase is loaded only on the reset password page to avoid blocking the landing page -->
+    <script type="module" crossorigin src="/assets/index-DxxW9ZdF.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Ch89DzFG.css">
   </head>
   <body>
