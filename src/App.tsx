@@ -44,21 +44,25 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({
       onClick={onClick}
       className={`
         inline-flex items-center justify-center
-        bg-black text-white
+        bg-transparent border-2 border-gray-800 dark:border-gray-200 text-gray-900 dark:text-white
+        sm:bg-black sm:text-white sm:border-0
         min-h-[44px] sm:min-h-[48px]
-        w-full sm:w-auto
-        ${isCompact ? 'px-3 py-1.5' : 'px-5 py-3 sm:px-6 sm:py-3.5'}
+        w-full max-w-[360px] sm:w-auto sm:max-w-none
+        ${isCompact 
+          ? 'px-3 py-2' 
+          : 'px-4 py-2.5 sm:px-6 sm:py-3.5'
+        }
         rounded-lg
-        hover:bg-gray-800
-        active:bg-gray-900
-        transition-colors duration-200
+        hover:bg-gray-100 dark:hover:bg-gray-800 sm:hover:bg-gray-800
+        active:bg-gray-200 dark:active:bg-gray-700 sm:active:bg-gray-900
+        transition-all duration-200
         focus:outline-none focus:ring-2 focus:ring-[#4FD1C5] focus:ring-offset-2
         ${className}
       `}
       aria-label={`${topText} ${bottomText} - Join iOS waitlist`}
     >
       <svg
-        className={`${isCompact ? 'w-7 h-7' : 'w-7 h-7 sm:w-8 sm:h-8'} mr-2 sm:mr-3 flex-shrink-0`}
+        className={`${isCompact ? 'w-6 h-6' : 'w-6 h-6 sm:w-8 sm:h-8'} mr-2 sm:mr-3 flex-shrink-0`}
         viewBox="0 0 24 24"
         fill="currentColor"
         aria-hidden="true"
@@ -66,8 +70,8 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
       </svg>
       <div className="text-left flex-shrink-0">
-        <div className={`${isCompact ? 'text-[10px]' : 'text-xs sm:text-xs'} leading-tight`}>{topText}</div>
-        <div className={`${isCompact ? 'text-xs' : 'text-sm sm:text-sm'} font-semibold leading-tight`}>{bottomText}</div>
+        <div className={`${isCompact ? 'text-[10px]' : 'text-[11px] sm:text-xs'} leading-tight font-medium`}>{topText}</div>
+        <div className={`${isCompact ? 'text-xs' : 'text-xs sm:text-sm'} font-semibold leading-tight`}>{bottomText}</div>
       </div>
     </a>
   );
@@ -95,19 +99,22 @@ const GooglePlayButton: React.FC<GooglePlayButtonProps> = ({
         inline-flex items-center justify-center
         bg-black text-white
         min-h-[44px] sm:min-h-[48px]
-        w-full sm:w-auto
-        ${isCompact ? 'px-3 py-1.5' : 'px-5 py-3 sm:px-6 sm:py-3.5'}
+        w-full max-w-[360px] sm:w-auto sm:max-w-none
+        ${isCompact 
+          ? 'px-3 py-2' 
+          : 'px-4 py-2.5 sm:px-6 sm:py-3.5'
+        }
         rounded-lg
         hover:bg-gray-800
         active:bg-gray-900
-        transition-colors duration-200
+        transition-all duration-200
         focus:outline-none focus:ring-2 focus:ring-[#4FD1C5] focus:ring-offset-2
         ${className}
       `}
       aria-label="Get Nutrimetrics on Google Play"
     >
       <svg
-        className={`${isCompact ? 'w-7 h-7' : 'w-7 h-7 sm:w-8 sm:h-8'} mr-2 sm:mr-3 flex-shrink-0`}
+        className={`${isCompact ? 'w-6 h-6' : 'w-6 h-6 sm:w-8 sm:h-8'} mr-2 sm:mr-3 flex-shrink-0`}
         viewBox="0 0 24 24"
         aria-hidden="true"
       >
@@ -117,8 +124,8 @@ const GooglePlayButton: React.FC<GooglePlayButtonProps> = ({
         <path d="M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" fill="#34A852" />
       </svg>
       <div className="text-left flex-shrink-0">
-        <div className={`${isCompact ? 'text-[10px]' : 'text-xs sm:text-xs'} leading-tight`}>GET IT ON</div>
-        <div className={`${isCompact ? 'text-xs' : 'text-sm sm:text-sm'} font-semibold leading-tight`}>Google Play</div>
+        <div className={`${isCompact ? 'text-[10px]' : 'text-[11px] sm:text-xs'} leading-tight font-medium`}>GET IT ON</div>
+        <div className={`${isCompact ? 'text-xs' : 'text-xs sm:text-sm'} font-semibold leading-tight`}>Google Play</div>
       </div>
     </a>
   );
@@ -152,14 +159,14 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({
   };
 
   return (
-    <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto ${className}`}>
-      <GooglePlayButton href={googlePlayHref} variant={variant} className="order-1 max-w-full sm:max-w-none" />
+    <div className={`flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full sm:w-auto items-center sm:items-start ${className}`}>
+      <GooglePlayButton href={googlePlayHref} variant={variant} className="order-1" />
       <AppStoreButton
         onClick={handleIosClick}
         topText={iosTopText}
         bottomText={iosBottomText}
         variant={variant}
-        className="order-2 max-w-full sm:max-w-none"
+        className="order-2"
       />
     </div>
   );
