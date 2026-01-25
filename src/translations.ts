@@ -1,8 +1,8 @@
 export const translations = {
   en: {
     // Meta and title
-    title: "Nutrimetrics - Your food, in one click",
-    metaDescription: "Track your meals with a photo. Nutrimetrics instantly estimates calories and nutrients in a simple, visual experience. Available now on Android. iOS coming soon.",
+    title: "Nutrimetrics – Photo Calorie & Macro Tracker",
+    metaDescription: "Track meals with a photo. Nutrimetrics estimates calories & macros instantly with AI.",
     
     // Hero section
     heroTitle: "Meet Nutrimetrics",
@@ -70,7 +70,7 @@ export const translations = {
     successNote: "Android is available now on Google Play.",
     
     // Footer
-    footerCopyright: "© 2025 Nutrimetrics",
+    footerCopyright: "© 2026 Nutrimetrics",
     footerCopyrightFull: "© Copyright 2026, All rights reserved",
     footerContact: "Contact: support@nutrimetrics.app",
     
@@ -155,7 +155,7 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Download Nutrimetrics",
-    downloadSubtitle: "Available on iOS and Android",
+    downloadSubtitle: "Available on Android. iOS coming soon.",
     downloadAppStore: "Download on the App Store",
     downloadGooglePlay: "GET IT ON Google Play",
     
@@ -291,8 +291,8 @@ export const translations = {
   
   es: {
     // Meta and title
-    title: "Nutrimetrics - Tu comida, en un clic",
-    metaDescription: "Rastrea tus comidas con una foto. Nutrimetrics estima calorías y nutrientes al instante en una experiencia simple y visual. Disponible ahora en Android. iOS próximamente.",
+    title: "Nutrimetrics – Contador de calorías y macros con una foto",
+    metaDescription: "Registra tus comidas con una foto. Nutrimetrics estima calorías y macros al instante con IA.",
     
     // Hero section
     heroTitle: "Conoce Nutrimetrics",
@@ -360,7 +360,7 @@ export const translations = {
     successNote: "Android ya está disponible en Google Play.",
     
     // Footer
-    footerCopyright: "© 2025 Nutrimetrics",
+    footerCopyright: "© 2026 Nutrimetrics",
     footerCopyrightFull: "© 2026. Todos los derechos reservados.",
     footerContact: "Contacto: support@nutrimetrics.app",
     
@@ -390,7 +390,7 @@ export const translations = {
     
     // Why Choose Nutrimetrics section
     whyChooseTitle: "¿Por qué elegir Nutrimetrics?",
-    whyChooseSubtitle: "La forma más inteligente de controlar tus comidas, con solo una foto.",
+    whyChooseSubtitle: "La forma más inteligente de registrar tus comidas, con solo una foto.",
     
     whyChoose1Title: "Olvídate de adivinar",
     whyChoose1Description: "No más registro manual de calorías ni escaneo de códigos de barras. Solo toma una foto y Nutrimetrics analiza tu comida al instante: calorías, macros y tamaño de las porciones, todo adaptado a tu perfil.",
@@ -445,7 +445,7 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Descargar Nutrimetrics",
-    downloadSubtitle: "Disponible en iOS y Android",
+    downloadSubtitle: "Disponible en Android. iOS próximamente.",
     downloadAppStore: "Descargar en App Store",
     downloadGooglePlay: "CONSÍGUELO EN Google Play",
     
@@ -581,8 +581,8 @@ export const translations = {
   
   fr: {
     // Meta and title
-    title: "Nutrimetrics - Votre nourriture, en un clic",
-    metaDescription: "Suivez vos repas avec une photo. Nutrimetrics estime instantanément calories et nutriments dans une expérience simple et visuelle. Disponible maintenant sur Android. iOS bientôt disponible.",
+    title: "Nutrimetrics – Compteur calories & macros par photo",
+    metaDescription: "Suivez vos repas avec une photo. Nutrimetrics estime calories et macros instantanément grâce à l’IA.",
     
     // Hero section
     // Hero section
@@ -634,9 +634,9 @@ export const translations = {
     
     // Goals
     goals: {
-      lose_weight: 'Perdre du Poids',
-      maintain_weight: 'Maintenir le Poids',
-      gain_weight: 'Prendre du Poids',
+      lose_weight: 'Perdre du poids',
+      maintain_weight: 'Maintenir le poids',
+      gain_weight: 'Prendre du muscle',
       improve_health: 'Améliorer ma santé',
       track_habits: 'Suivre mes habitudes alimentaires',
       just_explore: 'Juste explorer'
@@ -651,7 +651,7 @@ export const translations = {
     successNote: "Android est disponible dès maintenant sur Google Play.",
     
     // Footer
-    footerCopyright: "© 2025 Nutrimetrics",
+    footerCopyright: "© 2026 Nutrimetrics",
     footerCopyrightFull: "© Copyright 2026, Tous droits réservés",
     footerContact: "Contact : support@nutrimetrics.app",
     
@@ -736,7 +736,7 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Télécharger Nutrimetrics",
-    downloadSubtitle: "Disponible sur iOS et Android",
+    downloadSubtitle: "Disponible sur Android. iOS bientôt.",
     downloadAppStore: "Télécharger sur l'App Store",
     downloadGooglePlay: "OBTENIR SUR Google Play",
     
