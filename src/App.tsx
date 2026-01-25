@@ -961,6 +961,13 @@ function HomePage() {
                   {t.navTerms}
                 </button>
                 <span className="hidden sm:inline">•</span>
+                <button
+                  onClick={() => navigate('/changelog')}
+                  className="hover:text-white transition-colors underline text-gray-500"
+                >
+                  {t.navChangelog}
+                </button>
+                <span className="hidden sm:inline">•</span>
                 <a
                   href="https://nutrimetrics.app/delete-account"
                   target="_blank"

@@ -80,6 +80,7 @@ export const translations = {
     navContact: "Contact Us",
     navPrivacy: "Privacy",
     navTerms: "Terms of Use",
+    navChangelog: "What's new?",
     navDeleteAccount: "Delete Account",
     
     // Features showcase section
@@ -369,6 +370,7 @@ export const translations = {
     navContact: "Contáctanos",
     navPrivacy: "Privacidad",
     navTerms: "Términos de uso",
+    navChangelog: "Novedades",
     navDeleteAccount: "Eliminar cuenta",
     
     // Features showcase section
@@ -659,6 +661,7 @@ export const translations = {
     navContact: "Nous Contacter",
     navPrivacy: "Confidentialité",
     navTerms: "Conditions d'Utilisation",
+    navChangelog: "Nouveautés",
     navDeleteAccount: "Supprimer le Compte",
     
     // Features showcase section
