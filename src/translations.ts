@@ -280,6 +280,12 @@ export const translations = {
     deleteAccountResponseTime: "Within 24-48 hours",
     deleteAccountManualDeletion: "Our team can help you delete your account manually if necessary.",
     
+    // Changelog
+    changelogTitle: "Changelog",
+    changelogSubtitle: "Track the evolution of Nutrimetrics with every update.",
+    changelogLatest: "Latest",
+    changelogFooter: "Stay tuned for more updates and improvements.",
+    
   },
   
   es: {
@@ -563,6 +569,12 @@ export const translations = {
     deleteAccountResponseTime: "Dentro de 24-48 horas",
     deleteAccountManualDeletion: "Nuestro equipo puede ayudarte a eliminar tu cuenta manualmente si es necesario.",
     
+    // Changelog
+    changelogTitle: "Registro de Cambios",
+    changelogSubtitle: "Sigue la evolución de Nutrimetrics con cada actualización.",
+    changelogLatest: "Más reciente",
+    changelogFooter: "Mantente al tanto de más actualizaciones y mejoras.",
+    
   },
   
   fr: {
@@ -845,7 +857,13 @@ export const translations = {
     deleteAccountSubjectText: "\"Demande de suppression de compte\"",
     deleteAccountResponseLabel: "Réponse :",
     deleteAccountResponseTime: "Sous 24-48 heures",
-    deleteAccountManualDeletion: "Notre équipe peut vous aider à supprimer votre compte manuellement si nécessaire."
+    deleteAccountManualDeletion: "Notre équipe peut vous aider à supprimer votre compte manuellement si nécessaire.",
+    
+    // Changelog
+    changelogTitle: "Journal des Modifications",
+    changelogSubtitle: "Suivez l'évolution de Nutrimetrics avec chaque mise à jour.",
+    changelogLatest: "Dernière",
+    changelogFooter: "Restez à l'écoute pour plus de mises à jour et d'améliorations."
     
   }
 };

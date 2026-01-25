@@ -14,6 +14,7 @@ const PrivacyPage = lazy(() => import('./PrivacyPage'));
 const ComingSoonPage = lazy(() => import('./ComingSoonPage'));
 const TermsPage = lazy(() => import('./TermsPage'));
 const ResetPasswordPage = lazy(() => import('./ResetPasswordPage'));
+const ChangelogPage = lazy(() => import('./ChangelogPage'));
 
 // Componente principal de la página de inicio
 function HomePage() {
@@ -1097,6 +1098,32 @@ function ResetPasswordPageWrapper() {
   );
 }
 
+function ChangelogPageWrapper() {
+  const navigate = useNavigate();
+  // Load language from localStorage or default to 'en'
+  const [language, setLanguage] = useState<Language>(() => {
+    const saved = localStorage.getItem('nutrimetrics-language') as Language;
+    return (saved === 'en' || saved === 'es' || saved === 'fr') ? saved : 'en';
+  });
+
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ChangelogPage 
+        language={language} 
+        onBack={() => {
+          navigate('/');
+          setTimeout(() => {
+            const footer = document.querySelector('footer');
+            if (footer) {
+              footer.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 100);
+        }} 
+      />
+    </Suspense>
+  );
+}
+
 // Componente principal App con enrutamiento
 function App() {
   return (
@@ -1105,6 +1132,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPageWrapper />} />
         <Route path="/terms" element={<TermsPageWrapper />} />
+        <Route path="/changelog" element={<ChangelogPageWrapper />} />
         <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
         <Route path="/reset-password.html" element={<ResetPasswordPageWrapper />} />
       </Routes>
