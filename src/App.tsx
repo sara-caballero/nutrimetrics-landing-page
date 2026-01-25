@@ -44,17 +44,18 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({
       onClick={onClick}
       className={`
         inline-flex items-center justify-center
-        bg-transparent border-2 border-gray-800 dark:border-gray-200 text-gray-900 dark:text-white
+        bg-white border-2 border-gray-800 text-gray-900
         sm:bg-black sm:text-white sm:border-0
         min-h-[44px] sm:min-h-[48px]
-        w-full max-w-[360px] sm:w-auto sm:max-w-none
+        w-[280px] max-w-full sm:w-auto sm:max-w-none
+        mx-auto sm:mx-0
         ${isCompact 
           ? 'px-3 py-2' 
-          : 'px-4 py-2.5 sm:px-6 sm:py-3.5'
+          : 'px-4 py-2 sm:px-6 sm:py-3.5'
         }
         rounded-lg
-        hover:bg-gray-100 dark:hover:bg-gray-800 sm:hover:bg-gray-800
-        active:bg-gray-200 dark:active:bg-gray-700 sm:active:bg-gray-900
+        hover:bg-gray-50 sm:hover:bg-gray-800
+        active:bg-gray-100 sm:active:bg-gray-900
         transition-all duration-200
         focus:outline-none focus:ring-2 focus:ring-[#4FD1C5] focus:ring-offset-2
         ${className}
@@ -99,10 +100,11 @@ const GooglePlayButton: React.FC<GooglePlayButtonProps> = ({
         inline-flex items-center justify-center
         bg-black text-white
         min-h-[44px] sm:min-h-[48px]
-        w-full max-w-[360px] sm:w-auto sm:max-w-none
+        w-[280px] max-w-full sm:w-auto sm:max-w-none
+        mx-auto sm:mx-0
         ${isCompact 
           ? 'px-3 py-2' 
-          : 'px-4 py-2.5 sm:px-6 sm:py-3.5'
+          : 'px-4 py-2 sm:px-6 sm:py-3.5'
         }
         rounded-lg
         hover:bg-gray-800
@@ -159,7 +161,7 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({
   };
 
   return (
-    <div className={`flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full sm:w-auto items-center sm:items-start ${className}`}>
+    <div className={`flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full sm:w-auto items-center sm:items-start max-w-full ${className}`}>
       <GooglePlayButton href={googlePlayHref} variant={variant} className="order-1" />
       <AppStoreButton
         onClick={handleIosClick}
