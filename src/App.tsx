@@ -1,7 +1,9 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { Camera, BookOpen, Target, Globe, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown, Instagram, Facebook } from 'lucide-react';
-import { translations, Language } from './translations';
+import { Camera, BookOpen, Target, Zap, Menu, X, Search, Heart, TrendingUp, ChevronDown, Instagram, Facebook } from 'lucide-react';
+import { translations } from './translations';
+import { useLanguage } from './i18n/language';
+import LanguageSelector from './components/LanguageSelector';
 import logoImage from '/splash-icon.png';
 import nutrimetricsLogo from '/Nutrimetrics.png';
 import homeImage from '/home.png';
@@ -18,7 +20,7 @@ const ChangelogPage = lazy(() => import('./ChangelogPage'));
 
 // Componente principal de la página de inicio
 function HomePage() {
-  const [language, setLanguage] = useState<Language>('en');
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,12 +46,6 @@ function HomePage() {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const handleLanguageChange = (newLanguage: Language) => {
-    setLanguage(newLanguage);
-    setFormData({ name: '', email: '', goal: '' });
-    setIsSubmitted(false);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -227,20 +223,7 @@ function HomePage() {
 
       {/* Language Switcher */}
       <div className="fixed top-20 right-4 z-50">
-        <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-2">
-          <div className="flex items-center space-x-1">
-            <Globe className="w-4 h-4 text-gray-500" />
-            <select
-              value={language}
-              onChange={(e) => handleLanguageChange(e.target.value as Language)}
-              className="bg-transparent border-none text-sm font-medium text-gray-700 focus:outline-none cursor-pointer"
-            >
-              <option value="en">EN</option>
-              <option value="es">ES</option>
-              <option value="fr">FR</option>
-            </select>
-          </div>
-        </div>
+        <LanguageSelector variant="segmented" size="sm" />
       </div>
 
       <main>
@@ -1107,16 +1090,9 @@ function ResetPasswordPageWrapper() {
 
 function ChangelogPageWrapper() {
   const navigate = useNavigate();
-  // Load language from localStorage or default to 'en'
-  const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('nutrimetrics-language') as Language;
-    return (saved === 'en' || saved === 'es' || saved === 'fr') ? saved : 'en';
-  });
-
   return (
     <Suspense fallback={<div className="min-h-screen bg-white" />}>
       <ChangelogPage 
-        language={language} 
         onBack={() => {
           navigate('/');
           setTimeout(() => {

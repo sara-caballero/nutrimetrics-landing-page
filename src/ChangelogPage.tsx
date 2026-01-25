@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { ArrowLeft, Globe } from 'lucide-react';
-import { translations, Language } from './translations';
+import React from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { translations } from './translations';
+import { useLanguage } from './i18n/language';
+import LanguageSelector from './components/LanguageSelector';
 import logoImage from '/splash-icon.png';
 
 interface ChangelogPageProps {
-  language: Language;
   onBack: () => void;
 }
 
@@ -14,22 +15,8 @@ interface ChangelogVersion {
   changes: string[];
 }
 
-const ChangelogPage: React.FC<ChangelogPageProps> = ({ language: initialLanguage, onBack }) => {
-  // Load language from localStorage on mount, fallback to prop
-  const [language, setLanguage] = useState<Language>(() => {
-    const savedLanguage = localStorage.getItem('nutrimetrics-language') as Language;
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es' || savedLanguage === 'fr')) {
-      return savedLanguage;
-    }
-    return initialLanguage;
-  });
-
-  // Save language to localStorage when it changes
-  const handleLanguageChange = (newLanguage: Language) => {
-    setLanguage(newLanguage);
-    localStorage.setItem('nutrimetrics-language', newLanguage);
-  };
-
+const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
+  const { language } = useLanguage();
   const t = translations[language];
 
   // Get changelog data for current language
@@ -129,20 +116,7 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ language: initialLanguage
             
             {/* Language Selector */}
             <div className="flex items-center">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-1.5">
-                <div className="flex items-center space-x-1">
-                  <Globe className="w-3.5 h-3.5 text-gray-500" />
-                  <select
-                    value={language}
-                    onChange={(e) => handleLanguageChange(e.target.value as Language)}
-                    className="bg-transparent border-none text-xs sm:text-sm font-medium text-gray-700 focus:outline-none cursor-pointer appearance-none pr-6"
-                  >
-                    <option value="en">EN</option>
-                    <option value="es">ES</option>
-                    <option value="fr">FR</option>
-                  </select>
-                </div>
-              </div>
+              <LanguageSelector variant="segmented" size="sm" />
             </div>
           </div>
         </div>
