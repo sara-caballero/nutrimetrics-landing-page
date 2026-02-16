@@ -9,12 +9,23 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const LANGUAGE_STORAGE_KEY = 'nutrimetrics-language';
+const SUPPORTED_LANGUAGES: Language[] = ['en', 'es', 'fr'];
 
-// Get initial language from localStorage or default to 'en'
+// Detect browser language and map to a supported language
+const detectBrowserLanguage = (): Language | null => {
+  const browserLang = navigator.language?.split('-')[0]?.toLowerCase();
+  if (browserLang && SUPPORTED_LANGUAGES.includes(browserLang as Language)) {
+    return browserLang as Language;
+  }
+  return null;
+};
+
+// Priority: 1) localStorage (manual choice) → 2) browser language → 3) 'en' fallback
 const getInitialLanguage = (): Language => {
   if (typeof window === 'undefined') return 'en';
   const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language;
-  return (saved === 'en' || saved === 'es' || saved === 'fr') ? saved : 'en';
+  if (saved && SUPPORTED_LANGUAGES.includes(saved)) return saved;
+  return detectBrowserLanguage() ?? 'en';
 };
 
 interface LanguageProviderProps {
