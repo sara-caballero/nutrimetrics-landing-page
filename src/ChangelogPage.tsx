@@ -24,7 +24,7 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     if (language === 'es') {
       return [
         {
-          version: 'v2',
+          version: 'v2.0',
           changes: [
             'Interfaz completamente rediseñada para una experiencia más limpia y coherente',
             'Inicio de sesión y registro con Google para un acceso más rápido y sencillo',
@@ -55,7 +55,7 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     } else if (language === 'fr') {
       return [
         {
-          version: 'v2',
+          version: 'v2.0',
           changes: [
             'Interface entièrement repensée pour une expérience plus claire et cohérente',
             'Connexion et inscription avec Google pour un accès plus rapide et simple',
@@ -87,7 +87,7 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
       // English (default)
       return [
         {
-          version: 'v2',
+          version: 'v2.0',
           changes: [
             'Fully redesigned interface for a cleaner and more cohesive experience',
             'Sign in and sign up with Google for faster and easier access',
