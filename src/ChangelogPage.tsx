@@ -24,6 +24,15 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     if (language === 'es') {
       return [
         {
+          version: 'v2',
+          changes: [
+            'Interfaz completamente rediseñada para una experiencia más limpia y coherente',
+            'Inicio de sesión y registro con Google para un acceso más rápido y sencillo',
+            'Ahora puedes editar las comidas analizadas después de añadirlas',
+            'Ajustes visuales y mejoras de usabilidad en toda la app'
+          ]
+        },
+        {
           version: 'v1.1',
           changes: [
             'Consejos inteligentes y personalizados después de cada comida, según tu objetivo',
@@ -45,6 +54,15 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
       ];
     } else if (language === 'fr') {
       return [
+        {
+          version: 'v2',
+          changes: [
+            'Interface entièrement repensée pour une expérience plus claire et cohérente',
+            'Connexion et inscription avec Google pour un accès plus rapide et simple',
+            'Vous pouvez désormais modifier les repas analysés après les avoir ajoutés',
+            'Ajustements visuels et améliorations ergonomiques dans toute l\'application'
+          ]
+        },
         {
           version: 'v1.1',
           changes: [
@@ -68,6 +86,15 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     } else {
       // English (default)
       return [
+        {
+          version: 'v2',
+          changes: [
+            'Fully redesigned interface for a cleaner and more cohesive experience',
+            'Sign in and sign up with Google for faster and easier access',
+            'You can now edit analyzed meals after adding them',
+            'Visual adjustments and usability improvements throughout the app'
+          ]
+        },
         {
           version: 'v1.1',
           changes: [
