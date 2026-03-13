@@ -286,9 +286,33 @@ export const translations = {
     changelogSubtitle: "Track the evolution of Nutrimetrics with every update.",
     changelogLatest: "Latest",
     changelogFooter: "Stay tuned for more updates and improvements.",
-    
+
+    // Support page
+    navSupport: "Support",
+    supportTitle: "Nutrimetrics Support",
+    supportIntro: "Need help with Nutrimetrics? Contact us for account issues, subscription questions, bug reports, feature requests, or general support.",
+    supportResponseTime: "We usually respond within 48 hours.",
+    supportContactTitle: "Get in touch",
+    supportContactEmail: "support@nutrimetrics.app",
+    supportFormTitle: "Send us a message",
+    supportNameLabel: "Name",
+    supportNamePlaceholder: "Your name",
+    supportEmailFieldLabel: "Email",
+    supportEmailPlaceholder: "your@email.com",
+    supportSubjectLabel: "Subject",
+    supportSubjectPlaceholder: "What can we help you with?",
+    supportMessageLabel: "Message",
+    supportMessagePlaceholder: "Describe your issue or question in detail...",
+    supportSubmitButton: "Send Message",
+    supportSuccessTitle: "Message sent!",
+    supportSuccessMessage: "Thank you for contacting us. We'll get back to you within 48 hours.",
+    supportErrorMessage: "Failed to send message. Please try again or email us directly.",
+    supportLinksTitle: "Quick Links",
+    supportValidationRequired: "This field is required.",
+    supportValidationEmail: "Please enter a valid email address.",
+
   },
-  
+
   es: {
     // Meta and title
     title: "Nutrimetrics – Contador de calorías y macros con una foto",
@@ -576,9 +600,33 @@ export const translations = {
     changelogSubtitle: "Sigue la evolución de Nutrimetrics con cada actualización.",
     changelogLatest: "Más reciente",
     changelogFooter: "Mantente al tanto de más actualizaciones y mejoras.",
-    
+
+    // Support page
+    navSupport: "Soporte",
+    supportTitle: "Soporte de Nutrimetrics",
+    supportIntro: "¿Necesitas ayuda con Nutrimetrics? Contáctanos para problemas de cuenta, preguntas sobre suscripción, informes de errores, solicitudes de funciones o soporte general.",
+    supportResponseTime: "Normalmente respondemos en un plazo de 48 horas.",
+    supportContactTitle: "Ponte en contacto",
+    supportContactEmail: "support@nutrimetrics.app",
+    supportFormTitle: "Envíanos un mensaje",
+    supportNameLabel: "Nombre",
+    supportNamePlaceholder: "Tu nombre",
+    supportEmailFieldLabel: "Email",
+    supportEmailPlaceholder: "tu@email.com",
+    supportSubjectLabel: "Asunto",
+    supportSubjectPlaceholder: "¿En qué podemos ayudarte?",
+    supportMessageLabel: "Mensaje",
+    supportMessagePlaceholder: "Describe tu problema o pregunta en detalle...",
+    supportSubmitButton: "Enviar Mensaje",
+    supportSuccessTitle: "¡Mensaje enviado!",
+    supportSuccessMessage: "Gracias por contactarnos. Te responderemos en un plazo de 48 horas.",
+    supportErrorMessage: "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo o escríbenos directamente.",
+    supportLinksTitle: "Enlaces rápidos",
+    supportValidationRequired: "Este campo es obligatorio.",
+    supportValidationEmail: "Por favor, introduce una dirección de email válida.",
+
   },
-  
+
   fr: {
     // Meta and title
     title: "Nutrimetrics – Compteur calories & macros par photo",
@@ -866,8 +914,32 @@ export const translations = {
     changelogTitle: "Journal des Modifications",
     changelogSubtitle: "Suivez l'évolution de Nutrimetrics avec chaque mise à jour.",
     changelogLatest: "Dernière",
-    changelogFooter: "Restez à l'écoute pour plus de mises à jour et d'améliorations."
-    
+    changelogFooter: "Restez à l'écoute pour plus de mises à jour et d'améliorations.",
+
+    // Support page
+    navSupport: "Support",
+    supportTitle: "Support Nutrimetrics",
+    supportIntro: "Besoin d'aide avec Nutrimetrics ? Contactez-nous pour des problèmes de compte, des questions d'abonnement, des signalements de bugs, des demandes de fonctionnalités ou un support général.",
+    supportResponseTime: "Nous répondons généralement dans les 48 heures.",
+    supportContactTitle: "Nous contacter",
+    supportContactEmail: "support@nutrimetrics.app",
+    supportFormTitle: "Envoyez-nous un message",
+    supportNameLabel: "Nom",
+    supportNamePlaceholder: "Votre nom",
+    supportEmailFieldLabel: "Email",
+    supportEmailPlaceholder: "votre@email.com",
+    supportSubjectLabel: "Sujet",
+    supportSubjectPlaceholder: "Comment pouvons-nous vous aider ?",
+    supportMessageLabel: "Message",
+    supportMessagePlaceholder: "Décrivez votre problème ou question en détail...",
+    supportSubmitButton: "Envoyer le message",
+    supportSuccessTitle: "Message envoyé !",
+    supportSuccessMessage: "Merci de nous avoir contactés. Nous vous répondrons dans les 48 heures.",
+    supportErrorMessage: "Échec de l'envoi du message. Veuillez réessayer ou nous écrire directement.",
+    supportLinksTitle: "Liens rapides",
+    supportValidationRequired: "Ce champ est obligatoire.",
+    supportValidationEmail: "Veuillez saisir une adresse email valide.",
+
   }
 };
 

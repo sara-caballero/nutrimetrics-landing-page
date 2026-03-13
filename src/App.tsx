@@ -17,6 +17,7 @@ const ComingSoonPage = lazy(() => import('./ComingSoonPage'));
 const TermsPage = lazy(() => import('./TermsPage'));
 const ResetPasswordPage = lazy(() => import('./ResetPasswordPage'));
 const ChangelogPage = lazy(() => import('./ChangelogPage'));
+const SupportPage = lazy(() => import('./SupportPage'));
 
 // Reusable Store Button Components - Mobile-first, accessible, responsive
 interface AppStoreButtonProps {
@@ -1027,6 +1028,13 @@ function HomePage() {
                 >
                   {t.navDeleteAccount}
                 </a>
+                <span className="hidden sm:inline">•</span>
+                <button
+                  onClick={() => navigate('/support')}
+                  className="hover:text-white transition-colors underline"
+                >
+                  {t.navSupport}
+                </button>
               </div>
 
               {/* Middle - Contact + Store Buttons */}
@@ -1131,7 +1139,7 @@ function ChangelogPageWrapper() {
   const navigate = useNavigate();
   return (
     <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <ChangelogPage 
+      <ChangelogPage
         onBack={() => {
           navigate('/');
           setTimeout(() => {
@@ -1140,8 +1148,16 @@ function ChangelogPageWrapper() {
               footer.scrollIntoView({ behavior: 'smooth' });
             }
           }, 100);
-        }} 
+        }}
       />
+    </Suspense>
+  );
+}
+
+function SupportPageWrapper() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <SupportPage />
     </Suspense>
   );
 }
@@ -1157,6 +1173,7 @@ function App() {
         <Route path="/changelog" element={<ChangelogPageWrapper />} />
         <Route path="/coming-soon" element={<ComingSoonPageWrapper />} />
         <Route path="/reset-password.html" element={<ResetPasswordPageWrapper />} />
+        <Route path="/support" element={<SupportPageWrapper />} />
       </Routes>
     </Router>
   );
