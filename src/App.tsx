@@ -31,7 +31,7 @@ interface AppStoreButtonProps {
 
 const AppStoreButton: React.FC<AppStoreButtonProps> = ({
   onClick,
-  href = 'https://apps.apple.com/us/app/nutrimetrics-calorie-tracker/id6759910924',
+  href = 'https://apps.apple.com/app/id6759910924',
   topText,
   bottomText,
   variant = 'full',
