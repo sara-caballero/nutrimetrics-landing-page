@@ -31,18 +31,20 @@ interface AppStoreButtonProps {
 
 const AppStoreButton: React.FC<AppStoreButtonProps> = ({
   onClick,
-  href = '#signup-form',
+  href = 'https://apps.apple.com/us/app/nutrimetrics-calorie-tracker/id6759910924',
   topText,
   bottomText,
   variant = 'full',
   className = '',
 }) => {
   const isCompact = variant === 'compact';
-  
+
   return (
     <a
       href={href}
       onClick={onClick}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`
         inline-flex items-center justify-center
         bg-white border-2 border-gray-800 text-gray-900
@@ -61,7 +63,7 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({
         focus:outline-none focus:ring-2 focus:ring-[#4FD1C5] focus:ring-offset-2
         ${className}
       `}
-      aria-label={`${topText} ${bottomText} - Join iOS waitlist`}
+      aria-label={`${topText} ${bottomText} - Download on the App Store`}
     >
       <svg
         className={`${isCompact ? 'w-6 h-6' : 'w-6 h-6 sm:w-8 sm:h-8'} mr-2 sm:mr-3 flex-shrink-0`}
@@ -139,7 +141,6 @@ interface StoreButtonsProps {
   iosTopText: string;
   iosBottomText: string;
   googlePlayHref: string;
-  onIosClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   variant?: 'compact' | 'full';
   className?: string;
 }
@@ -148,24 +149,13 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({
   iosTopText,
   iosBottomText,
   googlePlayHref,
-  onIosClick,
   variant = 'full',
   className = '',
 }) => {
-  const handleIosClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (onIosClick) {
-      onIosClick(e);
-    } else {
-      document.getElementById('signup-form')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className={`flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full sm:w-auto items-center sm:items-start max-w-full ${className}`}>
       <GooglePlayButton href={googlePlayHref} variant={variant} className="order-1" />
       <AppStoreButton
-        onClick={handleIosClick}
         topText={iosTopText}
         bottomText={iosBottomText}
         variant={variant}
@@ -262,10 +252,6 @@ function HomePage() {
                   iosTopText={t.iosBadgeTop}
                   iosBottomText={t.iosBadgeBottom}
                   googlePlayHref="https://play.google.com/store/apps/details?id=com.nutrimetrics.app&pcampaignid=web_share"
-                  onIosClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection('signup-form');
-                  }}
                   variant="compact"
                 />
               </div>
@@ -311,10 +297,6 @@ function HomePage() {
                     iosTopText={t.iosBadgeTop}
                     iosBottomText={t.iosBadgeBottom}
                     googlePlayHref="https://play.google.com/store/apps/details?id=com.nutrimetrics.app&pcampaignid=web_share"
-                    onIosClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection('signup-form');
-                    }}
                   />
                 </div>
               </div>
@@ -717,7 +699,7 @@ function HomePage() {
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
             {!isSubmitted ? (
               <form action="https://formsubmit.co/support@nutrimetrics.app" method="POST" onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="_subject" value="iOS waitlist - Nutrimetrics" />
+                <input type="hidden" name="_subject" value="App updates signup - Nutrimetrics" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" value={window.location.href} />
                 <input type="hidden" name="language" value={language} />

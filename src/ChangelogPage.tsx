@@ -24,6 +24,26 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     if (language === 'es') {
       return [
         {
+          version: 'v2.2',
+          changes: [
+            'Recordatorios de comidas más inteligentes con mensajes variados y más atractivos',
+            'Ejemplos de sugerencias rotativos para ayudarte a obtener resultados más precisos',
+            'Ahora puedes eliminar comidas de tus favoritos',
+            'Corrección de errores y mejoras de rendimiento'
+          ]
+        },
+        {
+          version: 'v2.1',
+          changes: [
+            'Nuevo escaneo de código de barras para registrar productos al instante',
+            'Registro de entrenamientos disponible para hacer seguimiento de tus sesiones',
+            'Consejos inteligentes y personalizados después de cada comida, según tu objetivo',
+            'Ahora puedes enviar una nota para mejorar la precisión del análisis de comidas',
+            'Nuevos gráficos de progresión para visualizar mejor tus resultados',
+            'Mayor rendimiento y experiencia general más fluida'
+          ]
+        },
+        {
           version: 'v2.0',
           changes: [
             'Interfaz completamente rediseñada para una experiencia más limpia y coherente',
@@ -54,6 +74,26 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
       ];
     } else if (language === 'fr') {
       return [
+        {
+          version: 'v2.2',
+          changes: [
+            'Rappels de repas plus intelligents avec des messages variés et plus engageants',
+            'Exemples d\'astuces rotatifs pour vous aider à obtenir des résultats plus précis',
+            'Vous pouvez désormais supprimer des repas de vos favoris',
+            'Corrections de bugs et améliorations des performances'
+          ]
+        },
+        {
+          version: 'v2.1',
+          changes: [
+            'Nouveau scan de code-barres pour enregistrer vos produits instantanément',
+            'Journal d\'entraînement disponible pour suivre vos séances de sport',
+            'Des conseils intelligents et personnalisés après chaque repas, selon votre objectif',
+            'Vous pouvez désormais envoyer une note pour améliorer la précision de l\'analyse des repas',
+            'Nouveaux graphiques de progression pour mieux visualiser vos résultats',
+            'Meilleures performances et expérience globale plus fluide'
+          ]
+        },
         {
           version: 'v2.0',
           changes: [
@@ -86,6 +126,26 @@ const ChangelogPage: React.FC<ChangelogPageProps> = ({ onBack }) => {
     } else {
       // English (default)
       return [
+        {
+          version: 'v2.2',
+          changes: [
+            'Smarter meal reminders with varied, more engaging messages',
+            'Rotating hint examples to help you get more accurate results',
+            'You can now remove meals from your favourites',
+            'Bug fixes and performance improvements'
+          ]
+        },
+        {
+          version: 'v2.1',
+          changes: [
+            'New barcode scanning to log products instantly',
+            'Workout log now available to track your training sessions',
+            'Smart meal insights tailored to your goal after every logged meal',
+            'You can now send a note to improve meal analysis accuracy',
+            'New progression graphs to better visualize your results',
+            'Faster performance and smoother overall experience'
+          ]
+        },
         {
           version: 'v2.0',
           changes: [

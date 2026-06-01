@@ -412,8 +412,9 @@ const SupportPage: React.FC = () => {
                 </a>
                 {/* App Store */}
                 <a
-                  href="/"
-                  onClick={(e) => { e.preventDefault(); navigate('/'); }}
+                  href="https://apps.apple.com/us/app/nutrimetrics-calorie-tracker/id6759910924"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white border-2 border-gray-800 text-gray-900 sm:bg-black sm:text-white sm:border-0 min-h-[44px] w-[280px] max-w-full sm:w-auto px-3 py-2 rounded-lg hover:bg-gray-50 sm:hover:bg-gray-800 transition-all duration-200"
                   aria-label={`${t.iosBadgeTop} ${t.iosBadgeBottom}`}
                 >

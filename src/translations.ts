@@ -9,8 +9,8 @@ export const translations = {
     heroSubtitle: "Track your meals",
     heroSubtitle2: "with a photo",
     heroDescription: "Snap a picture of what you eat and instantly see calories and nutrients, all in one simple, visual experience.",
-    iosBadgeTop: "iOS",
-    iosBadgeBottom: "Coming soon",
+    iosBadgeTop: "Download on the",
+    iosBadgeBottom: "App Store",
     
     // Benefits section
     benefitsTitle: "Everything you need to track your nutrition",
@@ -42,7 +42,7 @@ export const translations = {
     
     // Form section
     formTitle: "Ready to transform your eating habits?",
-    formSubtitle: "Android is available now. Join the iOS waitlist to be notified when it launches.",
+    formSubtitle: "Available on Android and iOS. Download the app now.",
     
     nameLabel: "Name",
     namePlaceholder: "Enter your name",
@@ -61,13 +61,13 @@ export const translations = {
       just_explore: 'Just explore'
     },
     
-    submitButton: "Notify me for iOS",
-    formDisclaimer: "No spam. We'll email you when iOS is available.",
+    submitButton: "Get app updates",
+    formDisclaimer: "No spam. We'll only contact you with app updates.",
     
     // Success state
     successTitle: "You're on the list!",
-    successMessage: "Thanks — you're on the iOS waitlist. We'll email you when Nutrimetrics launches on the App Store.",
-    successNote: "Android is available now on Google Play.",
+    successMessage: "Thanks! We'll keep you updated on new Nutrimetrics features.",
+    successNote: "Available on Android and iOS.",
     
     // Footer
     footerCopyright: "© 2026 Nutrimetrics",
@@ -124,7 +124,7 @@ export const translations = {
     faqTitle: "Still have questions?",
     
     faq1Question: "Is Nutrimetrics available on iOS?",
-    faq1Answer: "Nutrimetrics is available now on Android. iOS is coming soon — join the waitlist below and we’ll notify you when it launches.",
+    faq1Answer: "Yes! Nutrimetrics is available now on both Android and iOS. Download it on Google Play or the App Store.",
     
     faq2Question: "How does the photo analysis work?",
     faq2Answer: "Nutrimetrics uses advanced AI and image recognition to analyze your meals. Just snap a photo (or upload one), and the app identifies ingredients, estimates portion sizes, and calculates calories, protein, fats, and carbs. You'll get a health score (1–5) and smart suggestions to improve your meal.",
@@ -155,16 +155,16 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Download Nutrimetrics",
-    downloadSubtitle: "Available on Android. iOS coming soon.",
+    downloadSubtitle: "Available on Android and iOS.",
     downloadAppStore: "Download on the App Store",
     downloadGooglePlay: "GET IT ON Google Play",
     
     // Coming Soon page
-    comingSoonTitle: "Coming Soon",
-    comingSoonSubtitle: "Nutrimetrics is available now on Google Play. iOS is coming soon.",
-    comingSoonCTA: "Join the iOS waitlist",
-    comingSoonCTADescription: "Leave your email and we’ll notify you when Nutrimetrics launches on the App Store.",
-    comingSoonBackButton: "Back to form",
+    comingSoonTitle: "Now Available",
+    comingSoonSubtitle: "Nutrimetrics is now available on Google Play and the App Store.",
+    comingSoonCTA: "Download Nutrimetrics",
+    comingSoonCTADescription: "Available now on both Google Play and the App Store.",
+    comingSoonBackButton: "Back to home",
     
     // Privacy Policy
     privacyPolicyTitle: "Privacy Policy – Nutrimetrics App",
@@ -323,8 +323,8 @@ export const translations = {
     heroSubtitle: "Controla tus comidas",
     heroSubtitle2: "con una sola foto",
     heroDescription: "Toma una foto de lo que comes y ve al instante las calorías y los nutrientes, todo en una experiencia simple y visual.",
-    iosBadgeTop: "iOS",
-    iosBadgeBottom: "Próximamente",
+    iosBadgeTop: "Descargar en",
+    iosBadgeBottom: "App Store",
     
     // Benefits section
     benefitsTitle: "Todo lo que necesitas para seguir tu nutrición",
@@ -356,7 +356,7 @@ export const translations = {
     
     // Form section
     formTitle: "¿Listo para transformar tus hábitos alimentarios?",
-    formSubtitle: "Android ya está disponible. Únete a la lista de espera de iOS para recibir un aviso cuando esté disponible.",
+    formSubtitle: "Disponible en Android y iOS. Descarga la app ahora.",
     
     nameLabel: "Nombre",
     namePlaceholder: "Ingresa tu nombre",
@@ -375,13 +375,13 @@ export const translations = {
       just_explore: 'Solo explorar'
     },
     
-    submitButton: "Avísame para iOS",
-    formDisclaimer: "Sin spam. Te avisaremos por email cuando iOS esté disponible.",
+    submitButton: "Recibir actualizaciones",
+    formDisclaimer: "Sin spam. Solo te contactaremos con actualizaciones de la app.",
     
     // Success state
     successTitle: "¡Listo!",
-    successMessage: "Gracias — estás en la lista de espera de iOS. Te avisaremos cuando Nutrimetrics esté disponible en App Store.",
-    successNote: "Android ya está disponible en Google Play.",
+    successMessage: "¡Gracias! Te mantendremos informado sobre las novedades de Nutrimetrics.",
+    successNote: "Disponible en Android y iOS.",
     
     // Footer
     footerCopyright: "© 2026 Nutrimetrics",
@@ -438,7 +438,7 @@ export const translations = {
     faqTitle: "¿Aún tienes preguntas?",
     
     faq1Question: "¿Nutrimetrics está disponible en iOS?",
-    faq1Answer: "Nutrimetrics ya está disponible en Android. iOS llegará pronto — únete a la lista de espera y te avisaremos cuando salga.",
+    faq1Answer: "¡Sí! Nutrimetrics ya está disponible en Android y iOS. Descárgala en Google Play o App Store.",
     
     faq2Question: "¿Cómo funciona el análisis de fotos?",
     faq2Answer: "Nutrimetrics usa IA avanzada y reconocimiento de imágenes para analizar tus comidas. Solo toma una foto (o súbela), y la app identifica ingredientes, estima tamaños de porción y calcula calorías, proteínas, grasas y carbohidratos. Obtendrás una puntuación de salud (1-5) y sugerencias inteligentes para mejorar tu comida.",
@@ -469,16 +469,16 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Descargar Nutrimetrics",
-    downloadSubtitle: "Disponible en Android. iOS próximamente.",
+    downloadSubtitle: "Disponible en Android y iOS.",
     downloadAppStore: "Descargar en App Store",
     downloadGooglePlay: "CONSÍGUELO EN Google Play",
     
     // Coming Soon page
-    comingSoonTitle: "Próximamente",
-    comingSoonSubtitle: "Nutrimetrics ya está disponible en Google Play. iOS llegará pronto.",
-    comingSoonCTA: "Únete a la lista de espera de iOS",
-    comingSoonCTADescription: "Deja tu email y te avisaremos cuando Nutrimetrics esté disponible en App Store.",
-    comingSoonBackButton: "Volver al formulario",
+    comingSoonTitle: "Ya disponible",
+    comingSoonSubtitle: "Nutrimetrics ya está disponible en Google Play y App Store.",
+    comingSoonCTA: "Descargar Nutrimetrics",
+    comingSoonCTADescription: "Disponible ahora en Google Play y App Store.",
+    comingSoonBackButton: "Volver al inicio",
     
     // Privacy Policy
     privacyPolicyTitle: "Política de Privacidad – Aplicación Nutrimetrics",
@@ -638,8 +638,8 @@ export const translations = {
     heroSubtitle: "Suivez vos repas",
     heroSubtitle2: "avec une photo",
     heroDescription: "Prenez une photo de ce que vous mangez et voyez instantanément les calories et les nutriments, le tout dans une expérience simple et visuelle.",
-    iosBadgeTop: "iOS",
-    iosBadgeBottom: "Bientôt",
+    iosBadgeTop: "Télécharger sur",
+    iosBadgeBottom: "App Store",
     
     // Benefits section
     benefitsTitle: "Tout ce dont vous avez besoin pour suivre votre nutrition",
@@ -671,7 +671,7 @@ export const translations = {
     
     // Form section
     formTitle: "Prêt à transformer vos habitudes alimentaires ?",
-    formSubtitle: "Android est disponible dès maintenant. Rejoignez la liste d’attente iOS pour être notifié au lancement.",
+    formSubtitle: "Disponible sur Android et iOS. Téléchargez l’app maintenant.",
     
     nameLabel: "Nom",
     namePlaceholder: "Entrez votre nom",
@@ -690,13 +690,13 @@ export const translations = {
       just_explore: 'Juste explorer'
     },
     
-    submitButton: "Me prévenir pour iOS",
-    formDisclaimer: "Pas de spam. Nous vous enverrons un email quand iOS sera disponible.",
+    submitButton: "Recevoir les mises à jour",
+    formDisclaimer: "Pas de spam. Nous vous contacterons uniquement pour les mises à jour de l'app.",
     
     // Success state
     successTitle: "C’est noté !",
-    successMessage: "Merci — vous êtes sur la liste d’attente iOS. Nous vous préviendrons quand Nutrimetrics sera disponible sur l’App Store.",
-    successNote: "Android est disponible dès maintenant sur Google Play.",
+    successMessage: "Merci ! Nous vous tiendrons informé des nouveautés de Nutrimetrics.",
+    successNote: "Disponible sur Android et iOS.",
     
     // Footer
     footerCopyright: "© 2026 Nutrimetrics",
@@ -753,7 +753,7 @@ export const translations = {
     faqTitle: "Vous avez encore des questions ?",
     
     faq1Question: "Nutrimetrics est-il disponible sur iOS ?",
-    faq1Answer: "Nutrimetrics est disponible dès maintenant sur Android. iOS arrive bientôt — rejoignez la liste d’attente et nous vous préviendrons au lancement.",
+    faq1Answer: "Oui ! Nutrimetrics est disponible dès maintenant sur Android et iOS. Téléchargez-le sur Google Play ou l’App Store.",
     
     faq2Question: "Comment fonctionne l'analyse photo ?",
     faq2Answer: "Nutrimetrics utilise l'IA avancée et la reconnaissance d'images pour analyser vos repas. Prenez simplement une photo (ou téléchargez-en une), et l'app identifie les ingrédients, estime les tailles de portions et calcule les calories, protéines, graisses et glucides. Vous obtiendrez un score de santé (1-5) et des suggestions intelligentes pour améliorer votre repas.",
@@ -784,16 +784,16 @@ export const translations = {
     
     // Download buttons
     downloadTitle: "Télécharger Nutrimetrics",
-    downloadSubtitle: "Disponible sur Android. iOS bientôt.",
+    downloadSubtitle: "Disponible sur Android et iOS.",
     downloadAppStore: "Télécharger sur l'App Store",
     downloadGooglePlay: "OBTENIR SUR Google Play",
     
     // Coming Soon page
-    comingSoonTitle: "Bientôt Disponible",
-    comingSoonSubtitle: "Nutrimetrics est disponible dès maintenant sur Google Play. iOS arrive bientôt.",
-    comingSoonCTA: "Rejoindre la liste d’attente iOS",
-    comingSoonCTADescription: "Laissez votre email et nous vous préviendrons au lancement sur l’App Store.",
-    comingSoonBackButton: "Retour au formulaire",
+    comingSoonTitle: "Maintenant Disponible",
+    comingSoonSubtitle: "Nutrimetrics est maintenant disponible sur Google Play et l’App Store.",
+    comingSoonCTA: "Télécharger Nutrimetrics",
+    comingSoonCTADescription: "Disponible dès maintenant sur Google Play et l’App Store.",
+    comingSoonBackButton: "Retour à l’accueil",
     
     // Privacy Policy
     privacyPolicyTitle: "Politique de Confidentialité – Application Nutrimetrics",
