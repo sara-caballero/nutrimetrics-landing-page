@@ -1001,7 +1001,7 @@ function HomePage() {
                 </button>
                 <span className="hidden sm:inline">•</span>
                 <a
-                  href="https://nutrimetrics.app/delete-account"
+                  href="https://nutrimetrics-app.netlify.app/delete-account"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors underline"
