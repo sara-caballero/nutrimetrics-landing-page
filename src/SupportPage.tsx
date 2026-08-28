@@ -202,7 +202,7 @@ const SupportPage: React.FC = () => {
                     <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#4FD1C5] transition-colors" />
                   </button>
                   <a
-                    href="https://nutrimetrics.app/delete-account"
+                    href="https://nutrimetrics-app.netlify.app/delete-account"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-between w-full px-4 py-2.5 rounded-lg text-left text-gray-700 hover:text-[#4FD1C5] hover:bg-[#4FD1C5]/5 transition-colors group"
@@ -373,7 +373,7 @@ const SupportPage: React.FC = () => {
                 </button>
                 <span className="hidden sm:inline">•</span>
                 <a
-                  href="https://nutrimetrics.app/delete-account"
+                  href="https://nutrimetrics-app.netlify.app/delete-account"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors underline"
